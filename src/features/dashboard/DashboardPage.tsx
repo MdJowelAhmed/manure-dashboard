@@ -7,14 +7,10 @@ import {
   Boxes,
   Banknote,
   WalletCards,
-  AlertTriangle,
   ArrowUpRight,
   Plus,
-  Scale,
   PackageCheck,
-  ChevronRight,
   ShieldCheck,
-  Calendar,
 } from 'lucide-react'
 import { MetricCard } from '@/components/shared/MetricCard'
 import { StatusBadge } from '@/components/shared/StatusBadge'
