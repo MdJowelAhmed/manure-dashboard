@@ -71,7 +71,24 @@ export const SettingsPage: React.FC = () => {
             Company profile, warehouse configurations, accounting period parameters, and audit trails
           </p>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
+          <a
+            href="/Meridian_Business_Documentation_BN.docx"
+            download="Meridian_Business_Documentation_BN.docx"
+            className="inline-flex items-center justify-center rounded-md text-xs font-medium h-9 px-3 bg-[#526B83] text-white hover:bg-[#3E5367] shadow-xs transition-colors"
+          >
+            <Download className="h-3.5 w-3.5 mr-1.5" />
+            ডকুমেন্টেশন ডাউনলোড (.docx)
+          </a>
+          <a
+            href="/documentation.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-md text-xs font-medium h-9 px-3 border border-[#DCE2E8] bg-white text-[#0F172A] hover:bg-[#F8FAFC] shadow-xs transition-colors"
+          >
+            <FileText className="h-3.5 w-3.5 mr-1.5 text-[#526B83]" />
+            ইউজার গাইড ভিউ
+          </a>
           <Button
             variant="outline"
             size="sm"

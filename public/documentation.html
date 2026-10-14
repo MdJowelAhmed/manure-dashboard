@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>মেরিডিয়ান বিজনেস — সিস্টেম ডকুমেন্টেশন ও ইউজার গাইড</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0F172A;
+      --secondary: #334155;
+      --accent: #526B83;
+      --accent-hover: #3E5367;
+      --border: #DCE2E8;
+      --bg: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --success: #166534;
+      --success-bg: #F0FDF4;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', 'Segoe UI', -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--secondary);
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+    }
+    .header-box {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+    .title {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+    .meta {
+      font-size: 13px;
+      color: #64748B;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+    }
+    .actions-bar {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--accent);
+      color: #FFFFFF;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: background 0.2s;
+    }
+    .btn:hover {
+      background-color: var(--accent-hover);
+    }
+    .btn-outline {
+      background-color: #FFFFFF;
+      color: var(--primary);
+      border: 1px solid var(--border);
+    }
+    .btn-outline:hover {
+      background-color: #F1F5F9;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 32px 0 16px;
+      border-left: 4px solid var(--accent);
+      padding-left: 12px;
+    }
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--accent);
+      margin: 20px 0 10px;
+    }
+    p {
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+    ul {
+      margin-left: 20px;
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    strong {
+      color: var(--primary);
+    }
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      font-size: 11px;
+      font-weight: 600;
+      border-radius: 4px;
+      background: #F1F5F9;
+      color: var(--accent);
+      border: 1px solid var(--border);
+      font-family: monospace;
+    }
+    .card-item {
+      background: #F8FAFC;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 13px;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #F1F5F9;
+      color: var(--primary);
+      font-weight: 600;
+    }
+    tr:nth-child(even) {
+      background-color: #FAFAFA;
+    }
+    .flow-box {
+      background: #EFF6FF;
+      border: 1px solid #BFDBFE;
+      border-radius: 8px;
+      padding: 16px;
+      margin: 20px 0;
+      font-size: 13px;
+      color: #1E3A8A;
+      line-height: 1.8;
+    }
+    @media print {
+      body {
+        background: #FFF;
+        padding: 0;
+      }
+      .container {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+      }
+      .actions-bar {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header-box">
+      <h1 class="title">মেরিডিয়ান বিজনেস (Meridian Business)</h1>
+      <div class="subtitle">প্রিমিয়াম সার আমদানি ও স্থানীয় পাইকারি বিক্রয় ব্যবস্থাপনা ড্যাশবোর্ড</div>
+      <div class="meta">
+        <span>🏢 <strong>প্রতিষ্ঠান:</strong> Meridian Agri-Trade Ltd. (চট্টগ্রাম)</span>
+        <span>📍 <strong>একক ডিপো:</strong> খাতুনগঞ্জ সেন্ট্রাল ডিপো</span>
+        <span>৳ <strong>কারেন্সি:</strong> BDT</span>
+        <span>📄 <strong>সংস্করণ:</strong> ১.০ (বাংলা নির্দেশিকা)</span>
+      </div>
+      <div class="actions-bar">
+        <a href="/Meridian_Business_Documentation_BN.docx" download="Meridian_Business_Documentation_BN.docx" class="btn">
+          📥 ডাউনলোড ওয়ার্ড ফাইল (.docx)
+        </a>
+        <button onclick="window.print()" class="btn btn-outline">
+          🖨️ প্রিন্ট / সেভ অ্যাজ PDF
+        </button>
+      </div>
+    </div>
+
+    <h2>১. ভূমিকা ও ব্যবসায়িক প্রেক্ষাপট (Business Context)</h2>
+    <p>এই অ্যাপ্লিকেশনটি বাংলাদেশে আন্তর্জাতিক সার আমদানিকারক এবং অভ্যন্তরীণ কৃষিপ্রধান জেলাগুলোতে স্থানীয় অনুমোদিত ডিলারদের কাছে পাইকারি সরবরাহকারী প্রতিষ্ঠানের জন্য একটি পূর্ণাঙ্গ এন্টারপ্রাইজ ম্যানেজমেন্ট প্ল্যাটফর্ম।</p>
+    <ul>
+      <li><strong>আন্তর্জাতিক আমদানি ও এলসি:</strong> সৌদি আরব (SABIC), মরক্কো (OCP Group), চীন (Sinofert) প্রভৃতি দেশের সরবরাহকারীদের কাছ থেকে সমুদ্রপথে বাল্ক সার ক্রয় ও ট্র্যাকিং।</li>
+      <li><strong>একক ওয়্যারহাউজ মডেল:</strong> চট্টগ্রাম বন্দর দিয়ে খালাস হওয়া সমস্ত সার সরাসরি চট্টগ্রামস্থ <strong>খাতুনগঞ্জ সেন্ট্রাল ডিপো</strong>-তে প্রবেশ করে (ধারণক্ষমতা: ১৫,০০০ মেট্রিক টন)।</li>
+      <li><strong>স্থানীয় বিতরণ:</strong> বগুড়া, যশোর, কুমিল্লা, দিনাজপুরসহ দেশের বিভিন্ন অঞ্চলের ডিলারদের কাছে চালান ইস্যু ও বিক্রয়।</li>
+      <li><strong>ল্যান্ডেড কস্টিং (Landed Cost):</strong> আন্তর্জাতিক ক্রয়মূল্যের সাথে সমুদ্র ফ্রেইট, মেরিন ইন্স্যুরেন্স, কাস্টমস ট্যাক্স ও পোর্ট চার্জ সমন্বয় করে প্রতি টনের প্রকৃত দর নির্ধারণ।</li>
+      <li><strong>ডাবল-এন্ট্রি অ্যাকাউন্টিং:</strong> জাবেদা, খতিয়ান, জিরো-ডিফারেন্স রেওয়ামিল (Trial Balance) এবং ব্যালেন্স শিট সমন্বিত।</li>
+    </ul>
+
+    <h2>২. সাইডবার ন্যাভিগেশন অনুযায়ী প্রতিটি পেজের কাজ ও বিবরণ</h2>
+
+    <h3>ক. ওভারভিউ (Overview)</h3>
+    <div class="card-item">
+      <h4>📊 ড্যাশবোর্ড <span class="badge">/dashboard</span></h4>
+      <p><strong>কাজের বিবরণ:</strong> পুরো ব্যবসার কেন্দ্রীয় মনিটরিং সেন্টার। মোট বিক্রয়, মোট লাভ, অপারেটিং খরচ, ডিলারদের কাছে বাকি (Receivables), এলসি দায় (Payables), এবং গুদামে থাকা মালের আর্থিক মূল্য দেখায়। সাথে রয়েছে মাসিক বিক্রয়ের ট্রেন্ড চার্ট, লো-স্টক অ্যালার্ট ও বকেয়া তাগাদার তালিকা।</p>
+      <p><strong>কেন ব্যবহার করবেন:</strong> এক পলকেই ব্যবসার সার্বিক স্বাস্থ্য পর্যবেক্ষণ ও Quick Actions দিয়ে তৎক্ষণাৎ নতুন বিল বা পেমেন্ট এন্ট্রি করার জন্য।</p>
+    </div>
+
+    <h3>খ. বাণিজ্য ও লজিস্টিকস (Trade & Logistics)</h3>
+    <div class="card-item">
+      <h4>🚢 আমদানি চালানসমূহ <span class="badge">/imports</span></h4>
+      <p>বিদেশ থেকে আসা প্রতিটি শিপমেন্টের বিস্তারিত রেকর্ড তালিকা (সাপ্লায়ারের নাম, জাহাজের নাম, পৌঁছানোর তারিখ ও স্ট্যাটাস)।</p>
+    </div>
+    <div class="card-item">
+      <h4>➕ নতুন আমদানি এন্ট্রি <span class="badge">/imports/new</span></h4>
+      <p>নতুন আমদানি চুক্তি এন্ট্রি পেজ। এতে রয়েছে লাইভ <strong>Landed Cost Calculator</strong>, যা ফ্রেইট ও শুল্ক যোগ করে প্রতি টনে আসল কত টাকা খরচ পড়বে তা গুদামে মাল আসার আগেই দেখায়।</p>
+    </div>
+    <div class="card-item">
+      <h4>📦 মালামাল প্রাপ্তি রসিদ (GRN) <span class="badge">/goods-receipts</span></h4>
+      <p>জাহাজ থেকে মাল খালাস হয়ে যখন ট্রাকযোগে খাতুনগঞ্জ ডিপোতে ঢোকে, তখন গুদাম ইনচার্জ এই রসিদ তৈরি করেন। কত টন ভালো এসেছে এবং কত বস্তা ঘাটতি বা নষ্ট হয়েছে তা লিপিবদ্ধ হয় এবং কনফার্ম করলেই স্টকে যুক্ত হয়।</p>
+    </div>
+    <div class="card-item">
+      <h4>🏢 গুদাম ইনভেন্টরি ও মজুত <span class="badge">/inventory</span></h4>
+      <p>খাতুনগঞ্জ ডিপোর বর্তমান সারের মজুত পরিস্থিতি। এসকেইউ কোড, নাম, স্টক (MT), গড় ল্যান্ডেড কস্ট এবং রি-অর্ডার লেভেল দেখায়। সাথে রয়েছে স্বয়ংক্রিয় একক রূপান্তর (১ মে.টন = ২০টি ৫০ কেজির ব্যাগ = ১,০০০ কেজি)।</p>
+    </div>
+    <div class="card-item">
+      <h4>🔄 স্টক মুভমেন্ট ইতিহাস <span class="badge">/inventory/movements</span></h4>
+      <p>গুদামের প্রতিটি দানাদার সারের আসা-যাওয়ার পূর্ণাঙ্গ টাইমলাইন ও অডিট ট্রেইল।</p>
+    </div>
+    <div class="card-item">
+      <h4>⚖️ স্টক সমন্বয় <span class="badge">/inventory/adjustments</span></h4>
+      <p>আর্দ্রতাজনিত ওজন হ্রাস (Moisture Loss) বা বস্তা ছিঁড়ে নষ্ট হওয়া সার সমন্বয় করে খাতা ও বাস্তব স্টক সমান রাখার ফরম্যাল স্ক্রিন।</p>
+    </div>
+
+    <h3>গ. বিক্রয় ও বিতরণ (Sales & Distribution)</h3>
+    <div class="card-item">
+      <h4>🧾 বিক্রয় চালানসমূহ <span class="badge">/sales</span></h4>
+      <p>ডিলার ও পাইকারদের নামে তৈরি সমস্ত ইনভয়েস, মোট বিল, কত টাকা জমা হয়েছে এবং কত বকেয়া রয়েছে তার সার্বিক তালিকা।</p>
+    </div>
+    <div class="card-item">
+      <h4>📝 নতুন বিক্রয় চালান তৈরি <span class="badge">/sales/new</span></h4>
+      <p>ডিলারের কাছে সার বিক্রির বিলিং পেজ। ডিপোতে পর্যাপ্ত মাল আছে কি না লাইভ যাচাই করে। গুদামে স্টক না থাকলে সিস্টেম বিল আটকায়, ফলে ভুল বিক্রির ঝুঁকি থাকে না।</p>
+    </div>
+    <div class="card-item">
+      <h4>🖨️ বাণিজ্যিক ইনভয়েস প্রিন্ট ভিউ <span class="badge">/sales/:id</span></h4>
+      <p>বাংলাদেশের কমার্শিয়াল ফরম্যাট অনুযায়ী তৈরি প্রিমিয়াম প্রিন্ট ভিউ। প্রতিষ্ঠানের নাম, ট্রেড লাইসেন্স, টিন/বিন, চালান নম্বর ও স্বাক্ষর ব্লকসহ সরাসরি A4 পেপারে প্রিন্ট নেওয়ার সুবিধা।</p>
+    </div>
+    <div class="card-item">
+      <h4>👥 গ্রাহক ও ডিলার ডিরেক্টরি <span class="badge">/customers</span></h4>
+      <p>অনুমোদিত ডিলারদের প্রোফাইল, ফোন নম্বর ও বকেয়া ব্যালেন্স। এখান থেকে ডিলারের সম্পূর্ণ লেজার স্টেটমেন্ট (Statement of Account) প্রিন্ট করা যায়।</p>
+    </div>
+    <div class="card-item">
+      <h4>🏭 আন্তর্জাতিক সরবরাহকারী <span class="badge">/suppliers</span></h4>
+      <p>বৈশ্বিক সার উৎপাদনকারী প্রতিষ্ঠানগুলোর প্রোফাইল, ব্যাংক সুইফট কোড এবং তাদের এলসি পাওনা ব্যালেন্স তদারকির পেজ।</p>
+    </div>
+
+    <h3>ঘ. ট্রেজারি ও ব্যয় ব্যবস্থাপনা (Treasury & Expense)</h3>
+    <div class="card-item">
+      <h4>💵 অর্থ গ্রহণ ও পরিশোধ <span class="badge">/payments</span></h4>
+      <p>গ্রাহকদের জমা (Customer Receipt) এবং সরবরাহকারীদের এলসি পরিশোধ (Supplier Payment) রেকর্ড করা। একটি জমার মাধ্যমে একাধিক চালানের বকেয়া এক ক্লিকে সমন্বয় করা যায়।</p>
+    </div>
+    <div class="card-item">
+      <h4>🏦 ব্যাংক ও ক্যাশ অ্যাকাউন্ট <span class="badge">/cash-bank</span></h4>
+      <p>ইস্টার্ন ব্যাংক ও ইসলামী ব্যাংকের অ্যাকাউন্টে বর্তমান স্থিতি (Liquid Balance) ও সাম্প্রতিক লেনদেন পর্যবেক্ষণ।</p>
+    </div>
+    <div class="card-item">
+      <h4>💼 পরিচালন ব্যয় <span class="badge">/expenses</span></h4>
+      <p>খাতুনগঞ্জ ডিপোর গুদাম ভাড়া, বিদ্যুৎ বিল, কর্মচারীদের বেতন, আনলোডিং লেবার খরচ ইত্যাদির হিসাব সংরক্ষণ।</p>
+    </div>
+
+    <h3>ঙ. ডাবল-এন্ট্রি অ্যাকাউন্টিং (Double-Entry Accounting)</h3>
+    <div class="card-item">
+      <h4>📑 চার্ট অব অ্যাকাউন্টস <span class="badge">/accounting/chart-of-accounts</span></h4>
+      <p>কোম্পানির সমস্ত হিসাবের মাস্টার তালিকা (Assets, Liabilities, Equity, Revenue, Expense) ও কোড কাঠামো।</p>
+    </div>
+    <div class="card-item">
+      <h4>✍️ জাবেদা দাখিলা <span class="badge">/accounting/journals</span></h4>
+      <p>সাধারণ জাবেদা ভাউচার। এতে কঠোর ম্যাথমেটিক্যাল চেক রয়েছে: মোট ডেবিট এবং মোট ক্রেডিট সমান না হলে সিস্টেম কোনোভাবেই পোস্টিং অনুমোদন করবে না।</p>
+    </div>
+    <div class="card-item">
+      <h4>📖 সাধারণ খতিয়ান বহী <span class="badge">/accounting/general-ledger</span></h4>
+      <p>যেকোনো নির্দিষ্ট হিসাবের বিস্তারিত লেনদেন ও রানিং ব্যালেন্স দেখার অডিট পেজ।</p>
+    </div>
+    <div class="card-item">
+      <h4>⚖️ রেওয়ামিল <span class="badge">/accounting/trial-balance</span></h4>
+      <p>মোট ডেবিট ব্যালেন্স ও মোট ক্রেডিট ব্যালেন্স শূন্য পার্থক্যে (Zero Variance) মিলেছে কি না তা যাচাইয়ের পেজ।</p>
+    </div>
+
+    <h3>চ. প্রাতিষ্ঠানিক রিপোর্ট ও সেটিংস (Reports & Settings)</h3>
+    <div class="card-item">
+      <h4>📈 রিপোর্ট হাব <span class="badge">/reports</span></h4>
+      <p>লাভ-ক্ষতি বিবরণী (Profit & Loss), উদ্বৃত্তপত্র (Balance Sheet), নগদ প্রবাহ (Cash Flow), ইনভেন্টরি ভ্যালুয়েশন, এবং ডিলারদের বকেয়া বয়সভিত্তিক তালিকা (Aging Analysis)।</p>
+    </div>
+    <div class="card-item">
+      <h4>⚙️ প্রতিষ্ঠান সেটিংস <span class="badge">/settings</span></h4>
+      <p>কোম্পানির নাম, ট্রেড লাইসেন্স নম্বর, টিন/বিন, খাতুনগঞ্জ ডিপোর বিবরণী, অডিট লগ এবং ব্যাকআপ এক্সপোর্ট।</p>
+    </div>
+
+    <h2>৩. ব্যবসায়িক কাজের সম্পূর্ণ জীবনচক্র (Workflow Lifecycle)</h2>
+    <div class="flow-box">
+      <strong>ধাপ ১:</strong> আন্তর্জাতিক আমদানি চুক্তি ও এলসি এন্ট্রি ➔ <br>
+      <strong>ধাপ ২:</strong> ল্যান্ডেড কস্টিং দ্বারা ফ্রেইট ও শুল্ক বণ্টন করে প্রতি টনের ক্রয়মূল্য নির্ধারণ ➔ <br>
+      <strong>ধাপ ৩:</strong> চট্টগ্রাম বন্দরে জাহাজ পৌঁছানো ও Goods Receipt (GRN) তৈরি ➔ <br>
+      <strong>ধাপ ৪:</strong> খাতুনগঞ্জ ডিপোর স্টকে স্বয়ংক্রিয়ভাবে মেট্রিক টন ও ব্যাগ বৃদ্ধি ➔ <br>
+      <strong>ধাপ ৫:</strong> ডিলারের কাছে বিক্রয়ের জন্য Sales Invoice তৈরি (লাইভ স্টক চেকিং) ➔ <br>
+      <strong>ধাপ ৬:</strong> ডিপো থেকে স্টক আউট এবং ডিলারের লেজারে বকেয়া যোগ ➔ <br>
+      <strong>ধাপ ৭:</strong> ব্যাংকে টাকা জমা ও Customer Receipt দিয়ে চালান সমন্বয় ➔ <br>
+      <strong>ধাপ ৮:</strong> স্বয়ংক্রিয় জাবেদা পোস্টিং, রেওয়ামিল ও ব্যালেন্স শিট আপডেট।
+    </div>
+
+    <h2>৪. সংক্ষিপ্ত সারসংক্ষেপ সারণী (Quick Reference Table)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>সেকশন</th>
+          <th>মূল ব্যবসায়িক কাজ</th>
+          <th>ওয়েব পেজ রুট</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>ড্যাশবোর্ড</strong></td>
+          <td>সার্বিক আর্থিক পর্যবেক্ষণ ও কুইক অ্যাকশন</td>
+          <td><code>/dashboard</code></td>
+        </tr>
+        <tr>
+          <td><strong>আমদানি চালান</strong></td>
+          <td>এলসি ট্র্যাকিং ও ফ্রেইট/শুল্কসহ আসল ল্যান্ডেড কস্টিং</td>
+          <td><code>/imports</code>, <code>/imports/new</code></td>
+        </tr>
+        <tr>
+          <td><strong>পণ্য রসিদ (GRN)</strong></td>
+          <td>বন্দর থেকে খাতুনগঞ্জ গুদামে সার রিসিভ ও স্টক ইন</td>
+          <td><code>/goods-receipts</code></td>
+        </tr>
+        <tr>
+          <td><strong>গুদাম ইনভেন্টরি</strong></td>
+          <td>সারের মজুত, ব্যাগ কনভার্সন (MT/ব্যাগ) ও অডিট লগ</td>
+          <td><code>/inventory</code>, <code>/inventory/movements</code></td>
+        </tr>
+        <tr>
+          <td><strong>বিক্রয় ও চালান</strong></td>
+          <td>ডিলারদের ইনভয়েস তৈরি ও কমার্শিয়াল চালান প্রিন্ট</td>
+          <td><code>/sales</code>, <code>/sales/new</code></td>
+        </tr>
+        <tr>
+          <td><strong>ডিলার ও লেজার</strong></td>
+          <td>ডিলারদের পাওনা বকেয়া ও স্টেটমেন্ট প্রিন্ট</td>
+          <td><code>/customers</code>, <code>/customers/:id</code></td>
+        </tr>
+        <tr>
+          <td><strong>ট্রেজারি ও ব্যাংক</strong></td>
+          <td>কাস্টমার রসিদ, এলসি পেমেন্ট ও ব্যাংক ব্যালেন্স</td>
+          <td><code>/payments</code>, <code>/cash-bank</code></td>
+        </tr>
+        <tr>
+          <td><strong>অ্যাকাউন্টিং</strong></td>
+          <td>জাবেদা দাখিলা ও জিরো-ডিফারেন্স রেওয়ামিল</td>
+          <td><code>/accounting/trial-balance</code></td>
+        </tr>
+        <tr>
+          <td><strong>আর্থিক রিপোর্ট</strong></td>
+          <td>লাভ-ক্ষতি বিবরণী (P&L) ও উদ্বৃত্তপত্র (Balance Sheet)</td>
+          <td><code>/reports/profit-loss</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="text-align: center; margin-top: 40px; color: #94A3B8; font-size: 12px;">
+      — প্রস্তুতকারী: Meridian Agri-Trade IT Systems —<br>
+      ফোন: +880 1711-234567 | ইমেইল: info@meridianagri.com.bd
+    </div>
+  </div>
+</body>
+</html>
