@@ -54,12 +54,12 @@ export const SupplierDetailPage: React.FC = () => {
           </Button>
           <div>
             <div className="flex items-center gap-2.5">
-              <h2 className="text-xl font-bold text-[#202833]">{supplier.name}</h2>
+              <h2 className="text-xl font-bold text-[#0F172A]">{supplier.name}</h2>
               <span className="px-2 py-0.5 rounded-md text-[11px] font-medium bg-[#EBF0F5] text-[#334155] border border-[#CBD5E1]">
                 {supplier.country}
               </span>
             </div>
-            <p className="text-xs text-[#697586]">
+            <p className="text-xs text-[#334155]">
               Code: {supplier.code} • Terms: {supplier.paymentTerms}
             </p>
           </div>
@@ -100,31 +100,31 @@ export const SupplierDetailPage: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 no-print">
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Total Import Contract Value</span>
-            <div className="text-xl font-bold font-mono text-[#202833] mt-0.5">
+            <span className="text-xs text-[#334155]">Total Import Contract Value</span>
+            <div className="text-xl font-bold font-mono text-[#0F172A] mt-0.5">
               {formatBDT(supplier.totalImportedBDT)}
             </div>
-            <span className="text-[11px] text-[#697586]">{imports.length} Shipments Contracted</span>
+            <span className="text-[11px] text-[#334155]">{imports.length} Shipments Contracted</span>
           </CardContent>
         </Card>
 
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Payments Settled (L/C & TT)</span>
+            <span className="text-xs text-[#334155]">Payments Settled (L/C & TT)</span>
             <div className="text-xl font-bold font-mono text-[#166534] mt-0.5">
               {formatBDT(supplier.totalPaidBDT)}
             </div>
-            <span className="text-[11px] text-[#697586]">Disbursed through banking lines</span>
+            <span className="text-[11px] text-[#334155]">Disbursed through banking lines</span>
           </CardContent>
         </Card>
 
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Outstanding Trade Payable</span>
+            <span className="text-xs text-[#334155]">Outstanding Trade Payable</span>
             <div className="text-xl font-bold font-mono text-[#991B1B] mt-0.5">
               {formatBDT(supplier.balanceDueBDT)}
             </div>
-            <span className="text-[11px] text-[#697586]">Sight L/C liability pending settlement</span>
+            <span className="text-[11px] text-[#334155]">Sight L/C liability pending settlement</span>
           </CardContent>
         </Card>
       </div>
@@ -168,7 +168,7 @@ export const SupplierDetailPage: React.FC = () => {
                       </TableCell>
                       <TableCell className="text-xs">
                         {imp.vesselName}
-                        <div className="text-[10px] text-[#697586]">BL: {imp.billOfLadingNo}</div>
+                        <div className="text-[10px] text-[#334155]">BL: {imp.billOfLadingNo}</div>
                       </TableCell>
                       <TableCell>{formatDate(imp.orderDate)}</TableCell>
                       <TableCell>{formatDate(imp.expectedArrivalDate)}</TableCell>
@@ -215,7 +215,7 @@ export const SupplierDetailPage: React.FC = () => {
                       </TableCell>
                       <TableCell>{formatDate(p.date)}</TableCell>
                       <TableCell>{p.paymentMethod}</TableCell>
-                      <TableCell className="text-xs text-[#697586]">{p.bankAccountName}</TableCell>
+                      <TableCell className="text-xs text-[#334155]">{p.bankAccountName}</TableCell>
                       <TableCell className="font-mono text-xs">{p.referenceNumber}</TableCell>
                       <TableCell className="text-right font-mono font-bold text-[#166534]">
                         {formatBDT(p.amountBDT)}
@@ -238,22 +238,22 @@ export const SupplierDetailPage: React.FC = () => {
             <CardContent className="space-y-3 text-xs">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1">
-                  <span className="text-[#697586]">Overseas Bank Details & SWIFT:</span>
-                  <div className="font-mono font-semibold text-[#202833]">{supplier.bankDetails}</div>
+                  <span className="text-[#334155]">Overseas Bank Details & SWIFT:</span>
+                  <div className="font-mono font-semibold text-[#0F172A]">{supplier.bankDetails}</div>
                 </div>
                 <div className="space-y-1">
-                  <span className="text-[#697586]">Payment Terms:</span>
-                  <div className="font-medium text-[#202833]">{supplier.paymentTerms}</div>
+                  <span className="text-[#334155]">Payment Terms:</span>
+                  <div className="font-medium text-[#0F172A]">{supplier.paymentTerms}</div>
                 </div>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 border-t border-[#F1F5F9]">
                 <div className="space-y-1">
-                  <span className="text-[#697586]">Contact Person:</span>
-                  <div className="font-medium text-[#202833]">{supplier.contactPerson}</div>
+                  <span className="text-[#334155]">Contact Person:</span>
+                  <div className="font-medium text-[#0F172A]">{supplier.contactPerson}</div>
                 </div>
                 <div className="space-y-1">
-                  <span className="text-[#697586]">Official Contact:</span>
-                  <div className="font-mono text-[#202833]">{supplier.email} • {supplier.phone}</div>
+                  <span className="text-[#334155]">Official Contact:</span>
+                  <div className="font-mono text-[#0F172A]">{supplier.email} • {supplier.phone}</div>
                 </div>
               </div>
             </CardContent>

@@ -98,12 +98,12 @@ export const ImportDetailPage: React.FC = () => {
           </Button>
           <div>
             <div className="flex items-center gap-2.5">
-              <h2 className="text-xl font-bold font-mono text-[#202833]">
+              <h2 className="text-xl font-bold font-mono text-[#0F172A]">
                 {shipment.importReference}
               </h2>
               <StatusBadge status={shipment.status} />
             </div>
-            <p className="text-xs text-[#697586]">
+            <p className="text-xs text-[#334155]">
               Supplier: {shipment.supplierName} • BL: {shipment.billOfLadingNo} • Port: {shipment.dischargePort}
             </p>
           </div>
@@ -151,21 +151,21 @@ export const ImportDetailPage: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Total Landed Cost</span>
-            <div className="text-lg font-bold font-mono text-[#202833] mt-0.5">
+            <span className="text-xs text-[#334155]">Total Landed Cost</span>
+            <div className="text-lg font-bold font-mono text-[#0F172A] mt-0.5">
               {formatBDT(shipment.totalImportCostBDT)}
             </div>
-            <span className="text-[11px] text-[#697586]">All eligible capitalized costs</span>
+            <span className="text-[11px] text-[#334155]">All eligible capitalized costs</span>
           </CardContent>
         </Card>
 
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Unit Landed Cost</span>
+            <span className="text-xs text-[#334155]">Unit Landed Cost</span>
             <div className="text-lg font-bold font-mono text-[#0F766E] mt-0.5">
               ৳ {mainItem ? mainItem.finalLandedCostPerMT.toLocaleString() : '—'} / MT
             </div>
-            <span className="text-[11px] text-[#697586]">
+            <span className="text-[11px] text-[#334155]">
               ৳ {mainItem ? Math.round(mainItem.finalLandedCostPerMT / 20).toLocaleString() : '—'} / 50kg bag
             </span>
           </CardContent>
@@ -173,11 +173,11 @@ export const ImportDetailPage: React.FC = () => {
 
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Goods Received</span>
-            <div className="text-lg font-bold font-mono text-[#202833] mt-0.5">
+            <span className="text-xs text-[#334155]">Goods Received</span>
+            <div className="text-lg font-bold font-mono text-[#0F172A] mt-0.5">
               {totalReceivedMT} / {totalOrderedMT} MT
             </div>
-            <span className="text-[11px] text-[#697586]">
+            <span className="text-[11px] text-[#334155]">
               {totalOrderedMT > 0 ? Math.round((totalReceivedMT / totalOrderedMT) * 100) : 0}% arrived at Khatunganj
             </span>
           </CardContent>
@@ -185,11 +185,11 @@ export const ImportDetailPage: React.FC = () => {
 
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Supplier Payable Due</span>
+            <span className="text-xs text-[#334155]">Supplier Payable Due</span>
             <div className="text-lg font-bold font-mono text-[#991B1B] mt-0.5">
               {formatBDT(shipment.balanceDueBDT)}
             </div>
-            <span className="text-[11px] text-[#697586]">
+            <span className="text-[11px] text-[#334155]">
               Paid: {formatBDT(shipment.totalPaidBDT)}
             </span>
           </CardContent>
@@ -227,7 +227,7 @@ export const ImportDetailPage: React.FC = () => {
                   <TableBody>
                     {shipment.items.map((it) => (
                       <TableRow key={it.id}>
-                        <TableCell className="font-medium text-[#202833]">
+                        <TableCell className="font-medium text-[#0F172A]">
                           {it.productName}
                         </TableCell>
                         <TableCell className="text-right font-mono font-semibold">
@@ -257,32 +257,32 @@ export const ImportDetailPage: React.FC = () => {
               </CardHeader>
               <CardContent className="space-y-3 text-xs">
                 <div className="flex justify-between py-1 border-b border-[#F1F5F9]">
-                  <span className="text-[#697586]">Exporter:</span>
-                  <span className="font-medium text-[#202833]">{shipment.supplierName}</span>
+                  <span className="text-[#334155]">Exporter:</span>
+                  <span className="font-medium text-[#0F172A]">{shipment.supplierName}</span>
                 </div>
                 <div className="flex justify-between py-1 border-b border-[#F1F5F9]">
-                  <span className="text-[#697586]">Supplier Invoice:</span>
+                  <span className="text-[#334155]">Supplier Invoice:</span>
                   <span className="font-mono">{shipment.supplierInvoiceNo}</span>
                 </div>
                 <div className="flex justify-between py-1 border-b border-[#F1F5F9]">
-                  <span className="text-[#697586]">Bill of Lading:</span>
+                  <span className="text-[#334155]">Bill of Lading:</span>
                   <span className="font-mono">{shipment.billOfLadingNo}</span>
                 </div>
                 <div className="flex justify-between py-1 border-b border-[#F1F5F9]">
-                  <span className="text-[#697586]">Mother Vessel:</span>
+                  <span className="text-[#334155]">Mother Vessel:</span>
                   <span className="font-medium">{shipment.vesselName}</span>
                 </div>
                 <div className="flex justify-between py-1 border-b border-[#F1F5F9]">
-                  <span className="text-[#697586]">Discharge Port:</span>
+                  <span className="text-[#334155]">Discharge Port:</span>
                   <span className="font-medium">{shipment.dischargePort}</span>
                 </div>
                 <div className="flex justify-between py-1 border-b border-[#F1F5F9]">
-                  <span className="text-[#697586]">Expected Arrival:</span>
+                  <span className="text-[#334155]">Expected Arrival:</span>
                   <span>{formatDate(shipment.expectedArrivalDate)}</span>
                 </div>
                 {shipment.actualArrivalDate && (
                   <div className="flex justify-between py-1 border-b border-[#F1F5F9]">
-                    <span className="text-[#697586]">Actual Discharge:</span>
+                    <span className="text-[#334155]">Actual Discharge:</span>
                     <span className="text-[#166534] font-medium">
                       {formatDate(shipment.actualArrivalDate)}
                     </span>
@@ -290,7 +290,7 @@ export const ImportDetailPage: React.FC = () => {
                 )}
                 {shipment.notes && (
                   <div className="pt-2">
-                    <span className="text-[#697586] block mb-1">Notes:</span>
+                    <span className="text-[#334155] block mb-1">Notes:</span>
                     <p className="p-2 rounded-lg bg-[#F8FAFC] border border-[#DCE2E8] text-[11px] text-[#475569]">
                       {shipment.notes}
                     </p>
@@ -399,24 +399,24 @@ export const ImportDetailPage: React.FC = () => {
                 {/* Calculation Methodology Info */}
                 <div className="space-y-4">
                   <div className="p-4 rounded-xl bg-[#F8FAFC] border border-[#DCE2E8] space-y-3">
-                    <h4 className="text-xs font-semibold text-[#202833] flex items-center gap-1.5">
+                    <h4 className="text-xs font-semibold text-[#0F172A] flex items-center gap-1.5">
                       <Calculator className="h-4 w-4 text-[#526B83]" />
                       Weight-Allocation Method Applied
                     </h4>
-                    <p className="text-xs text-[#697586] leading-relaxed">
+                    <p className="text-xs text-[#334155] leading-relaxed">
                       For bulk fertilizer imports, freight, customs duty, port handling, and lighterage
                       charges are allocated proportionally based on physical weight (Metric Tons) discharged.
                     </p>
                     <div className="p-3 rounded-lg bg-white border border-[#DCE2E8] space-y-1 text-xs">
                       <div className="flex justify-between">
-                        <span className="text-[#697586]">Net Landed Rate / MT:</span>
+                        <span className="text-[#334155]">Net Landed Rate / MT:</span>
                         <strong className="font-mono text-[#0F766E]">
                           ৳ {mainItem?.finalLandedCostPerMT.toLocaleString()}
                         </strong>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-[#697586]">Net Landed Rate / 50kg Bag:</span>
-                        <strong className="font-mono text-[#202833]">
+                        <span className="text-[#334155]">Net Landed Rate / 50kg Bag:</span>
+                        <strong className="font-mono text-[#0F172A]">
                           ৳ {mainItem ? Math.round(mainItem.finalLandedCostPerMT / 20).toLocaleString() : '—'}
                         </strong>
                       </div>
@@ -483,7 +483,7 @@ export const ImportDetailPage: React.FC = () => {
                           {gr.damagedMT > 0 ? `${gr.damagedMT} MT` : '0 MT'}
                         </TableCell>
                         <TableCell>{gr.warehouseLocation}</TableCell>
-                        <TableCell className="text-xs text-[#697586]">{gr.receivedBy}</TableCell>
+                        <TableCell className="text-xs text-[#334155]">{gr.receivedBy}</TableCell>
                       </TableRow>
                     ))}
                   </TableBody>

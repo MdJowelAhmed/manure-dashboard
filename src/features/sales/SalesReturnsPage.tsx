@@ -76,7 +76,7 @@ export const SalesReturnsPage: React.FC = () => {
       accessorKey: 'invoiceNumber',
       header: 'Original Invoice',
       cell: ({ row }) => (
-        <span className="font-mono text-xs text-[#202833] font-medium">
+        <span className="font-mono text-xs text-[#0F172A] font-medium">
           {row.getValue('invoiceNumber')}
         </span>
       ),
@@ -85,7 +85,7 @@ export const SalesReturnsPage: React.FC = () => {
       accessorKey: 'customerName',
       header: 'Customer',
       cell: ({ row }) => (
-        <span className="font-semibold text-xs text-[#202833]">
+        <span className="font-semibold text-xs text-[#0F172A]">
           {row.getValue('customerName')}
         </span>
       ),
@@ -99,7 +99,7 @@ export const SalesReturnsPage: React.FC = () => {
       accessorKey: 'productName',
       header: 'Product',
       cell: ({ row }) => (
-        <span className="text-xs text-[#202833]">{row.getValue('productName')}</span>
+        <span className="text-xs text-[#0F172A]">{row.getValue('productName')}</span>
       ),
     },
     {
@@ -115,7 +115,7 @@ export const SalesReturnsPage: React.FC = () => {
       accessorKey: 'refundAmountBDT',
       header: 'Credit Note (BDT)',
       cell: ({ row }) => (
-        <span className="font-mono font-bold text-xs text-[#202833]">
+        <span className="font-mono font-bold text-xs text-[#0F172A]">
           {formatBDT(row.getValue('refundAmountBDT'))}
         </span>
       ),
@@ -139,7 +139,7 @@ export const SalesReturnsPage: React.FC = () => {
       accessorKey: 'reason',
       header: 'Return Reason',
       cell: ({ row }) => (
-        <span className="text-xs text-[#697586] max-w-[200px] truncate block">
+        <span className="text-xs text-[#334155] max-w-[200px] truncate block">
           {row.getValue('reason')}
         </span>
       ),
@@ -150,8 +150,8 @@ export const SalesReturnsPage: React.FC = () => {
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h2 className="text-xl font-bold text-[#202833]">Sales Returns & Credit Notes</h2>
-          <p className="text-xs text-[#697586]">
+          <h2 className="text-xl font-bold text-[#0F172A]">Sales Returns & Credit Notes</h2>
+          <p className="text-xs text-[#334155]">
             Manage damaged bag returns, customer ledger credit notes, and warehouse restock
           </p>
         </div>
@@ -253,7 +253,7 @@ export const SalesReturnsPage: React.FC = () => {
                   onChange={(e) => setRestocked(e.target.checked)}
                   className="rounded border-[#DCE2E8] text-[#526B83] focus:ring-[#526B83]"
                 />
-                <label htmlFor="restockCheck" className="text-xs text-[#202833] cursor-pointer">
+                <label htmlFor="restockCheck" className="text-xs text-[#0F172A] cursor-pointer">
                   Restock returned quantity back into Khatunganj Central Depot inventory
                 </label>
               </div>

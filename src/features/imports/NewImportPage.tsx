@@ -143,8 +143,8 @@ export const NewImportPage: React.FC = () => {
             <ArrowLeft className="h-4 w-4" />
           </Button>
           <div>
-            <h2 className="text-xl font-bold text-[#202833]">New Import Consignment</h2>
-            <p className="text-xs text-[#697586]">
+            <h2 className="text-xl font-bold text-[#0F172A]">New Import Consignment</h2>
+            <p className="text-xs text-[#334155]">
               Record international purchase contract, shipping schedule, and eligible landed-cost breakdown
             </p>
           </div>
@@ -318,7 +318,7 @@ export const NewImportPage: React.FC = () => {
                 </div>
                 <div className="space-y-1.5">
                   <Label>Calculated FOB Total (BDT)</Label>
-                  <div className="h-9 px-3 flex items-center font-mono font-semibold text-sm bg-[#F8FAFC] border border-[#DCE2E8] rounded-lg text-[#202833]">
+                  <div className="h-9 px-3 flex items-center font-mono font-semibold text-sm bg-[#F8FAFC] border border-[#DCE2E8] rounded-lg text-[#0F172A]">
                     {formatBDT(totalFobBDT)}
                   </div>
                 </div>
@@ -408,7 +408,7 @@ export const NewImportPage: React.FC = () => {
         <div className="space-y-6">
           <Card className="sticky top-20 border-[#CBD5E1] shadow-sm">
             <CardHeader className="bg-[#F8FAFC] border-b border-[#DCE2E8] pb-3">
-              <CardTitle className="text-sm font-semibold flex items-center gap-2 text-[#202833]">
+              <CardTitle className="text-sm font-semibold flex items-center gap-2 text-[#0F172A]">
                 <Calculator className="h-4 w-4 text-[#526B83]" />
                 Landed Cost Allocation Preview
               </CardTitle>
@@ -419,33 +419,33 @@ export const NewImportPage: React.FC = () => {
             <CardContent className="p-4 space-y-4">
               <div className="space-y-2 text-xs">
                 <div className="flex justify-between py-1 border-b border-[#F1F5F9]">
-                  <span className="text-[#697586]">Base FOB Contract:</span>
+                  <span className="text-[#334155]">Base FOB Contract:</span>
                   <span className="font-mono font-medium">{formatBDT(totalFobBDT)}</span>
                 </div>
                 <div className="flex justify-between py-1 border-b border-[#F1F5F9]">
-                  <span className="text-[#697586]">Ocean Freight:</span>
+                  <span className="text-[#334155]">Ocean Freight:</span>
                   <span className="font-mono font-medium">{formatBDT(oceanFreight)}</span>
                 </div>
                 <div className="flex justify-between py-1 border-b border-[#F1F5F9]">
-                  <span className="text-[#697586]">Marine Insurance:</span>
+                  <span className="text-[#334155]">Marine Insurance:</span>
                   <span className="font-mono font-medium">{formatBDT(marineInsurance)}</span>
                 </div>
                 <div className="flex justify-between py-1 border-b border-[#F1F5F9]">
-                  <span className="text-[#697586]">Customs Duty (NBR):</span>
+                  <span className="text-[#334155]">Customs Duty (NBR):</span>
                   <span className="font-mono font-medium">{formatBDT(customsDuty)}</span>
                 </div>
                 <div className="flex justify-between py-1 border-b border-[#F1F5F9]">
-                  <span className="text-[#697586]">Port Handling (CPA):</span>
+                  <span className="text-[#334155]">Port Handling (CPA):</span>
                   <span className="font-mono font-medium">{formatBDT(portHandling)}</span>
                 </div>
                 <div className="flex justify-between py-1 border-b border-[#F1F5F9]">
-                  <span className="text-[#697586]">C&F & Inland Transport:</span>
+                  <span className="text-[#334155]">C&F & Inland Transport:</span>
                   <span className="font-mono font-medium">
                     {formatBDT(clearingCommission + inlandTransport)}
                   </span>
                 </div>
                 <div className="flex justify-between py-1.5 font-semibold text-sm border-t border-[#DCE2E8] pt-2">
-                  <span className="text-[#202833]">Total Landed Cost:</span>
+                  <span className="text-[#0F172A]">Total Landed Cost:</span>
                   <span className="font-mono text-[#526B83]">
                     {formatBDT(landedPreview.totalLandedCostBDT)}
                   </span>
@@ -455,14 +455,14 @@ export const NewImportPage: React.FC = () => {
               {/* Unit Metrics Highlight Box */}
               <div className="p-3 rounded-lg bg-[#EBF0F5] border border-[#CBD5E1] space-y-2">
                 <div className="flex justify-between items-center text-xs">
-                  <span className="font-semibold text-[#202833]">Unit Landed Cost:</span>
-                  <span className="font-mono font-bold text-sm text-[#202833]">
+                  <span className="font-semibold text-[#0F172A]">Unit Landed Cost:</span>
+                  <span className="font-mono font-bold text-sm text-[#0F172A]">
                     ৳ {landedPreview.averageLandedPerMT.toLocaleString()} / MT
                   </span>
                 </div>
-                <div className="flex justify-between items-center text-xs text-[#697586]">
+                <div className="flex justify-between items-center text-xs text-[#334155]">
                   <span>Equivalent per 50kg Bag:</span>
-                  <span className="font-mono font-medium text-[#202833]">
+                  <span className="font-mono font-medium text-[#0F172A]">
                     ৳ {Math.round(landedPreview.averageLandedPerMT / 20).toLocaleString()} / Bag
                   </span>
                 </div>

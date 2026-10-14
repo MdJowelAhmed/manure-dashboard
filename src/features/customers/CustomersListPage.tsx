@@ -35,8 +35,8 @@ export const CustomersListPage: React.FC = () => {
       header: 'Dealer / Company Name',
       cell: ({ row }) => (
         <div className="flex flex-col">
-          <span className="font-semibold text-xs text-[#202833]">{row.original.name}</span>
-          <span className="text-[11px] text-[#697586]">{row.original.district}</span>
+          <span className="font-semibold text-xs text-[#0F172A]">{row.original.name}</span>
+          <span className="text-[11px] text-[#334155]">{row.original.district}</span>
         </div>
       ),
     },
@@ -45,8 +45,8 @@ export const CustomersListPage: React.FC = () => {
       header: 'Contact Person & Phone',
       cell: ({ row }) => (
         <div className="flex flex-col text-xs">
-          <span className="text-[#202833]">{row.original.contactPerson}</span>
-          <span className="text-[11px] text-[#697586] font-mono">{row.original.phone}</span>
+          <span className="text-[#0F172A]">{row.original.contactPerson}</span>
+          <span className="text-[11px] text-[#334155] font-mono">{row.original.phone}</span>
         </div>
       ),
     },
@@ -54,7 +54,7 @@ export const CustomersListPage: React.FC = () => {
       accessorKey: 'totalSalesBDT',
       header: 'Total Sales (BDT)',
       cell: ({ row }) => (
-        <span className="font-mono font-medium text-xs text-[#202833] text-right block">
+        <span className="font-mono font-medium text-xs text-[#0F172A] text-right block">
           {formatBDT(row.original.totalSalesBDT)}
         </span>
       ),
@@ -76,7 +76,7 @@ export const CustomersListPage: React.FC = () => {
         return (
           <span
             className={`font-mono font-bold text-xs text-right block ${
-              due > 0 ? 'text-[#991B1B]' : 'text-[#697586]'
+              due > 0 ? 'text-[#991B1B]' : 'text-[#334155]'
             }`}
           >
             {due > 0 ? formatBDT(due) : '—'}
@@ -112,8 +112,8 @@ export const CustomersListPage: React.FC = () => {
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h2 className="text-xl font-bold text-[#202833]">Customer Directory & Dealer Ledgers</h2>
-          <p className="text-xs text-[#697586]">
+          <h2 className="text-xl font-bold text-[#0F172A]">Customer Directory & Dealer Ledgers</h2>
+          <p className="text-xs text-[#334155]">
             Domestic fertilizer distributors, dealers, regional cooperatives, and credit limits
           </p>
         </div>
@@ -130,31 +130,31 @@ export const CustomersListPage: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Cumulative Dealer Sales</span>
-            <div className="text-xl font-bold font-mono text-[#202833] mt-0.5">
+            <span className="text-xs text-[#334155]">Cumulative Dealer Sales</span>
+            <div className="text-xl font-bold font-mono text-[#0F172A] mt-0.5">
               {formatBDT(totalSales)}
             </div>
-            <span className="text-[11px] text-[#697586]">{customers.length} Registered Dealers</span>
+            <span className="text-[11px] text-[#334155]">{customers.length} Registered Dealers</span>
           </CardContent>
         </Card>
 
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Collections Received</span>
+            <span className="text-xs text-[#334155]">Collections Received</span>
             <div className="text-xl font-bold font-mono text-[#166534] mt-0.5">
               {formatBDT(totalPaid)}
             </div>
-            <span className="text-[11px] text-[#697586]">Settled via banking channels</span>
+            <span className="text-[11px] text-[#334155]">Settled via banking channels</span>
           </CardContent>
         </Card>
 
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Total Outstanding Due</span>
+            <span className="text-xs text-[#334155]">Total Outstanding Due</span>
             <div className="text-xl font-bold font-mono text-[#991B1B] mt-0.5">
               {formatBDT(totalDue)}
             </div>
-            <span className="text-[11px] text-[#697586]">Trade debtor receivables</span>
+            <span className="text-[11px] text-[#334155]">Trade debtor receivables</span>
           </CardContent>
         </Card>
       </div>

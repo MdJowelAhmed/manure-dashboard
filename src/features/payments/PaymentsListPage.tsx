@@ -64,7 +64,7 @@ export const PaymentsListPage: React.FC = () => {
       accessorKey: 'partyName',
       header: 'Party (Dealer / Supplier)',
       cell: ({ row }) => (
-        <span className="font-semibold text-xs text-[#202833]">
+        <span className="font-semibold text-xs text-[#0F172A]">
           {row.getValue('partyName')}
         </span>
       ),
@@ -77,7 +77,7 @@ export const PaymentsListPage: React.FC = () => {
         return (
           <span
             className={`font-mono font-bold text-xs text-right block ${
-              isReceipt ? 'text-[#166534]' : 'text-[#202833]'
+              isReceipt ? 'text-[#166534]' : 'text-[#0F172A]'
             }`}
           >
             {isReceipt ? `+${formatBDT(row.original.amountBDT)}` : `-${formatBDT(row.original.amountBDT)}`}
@@ -89,7 +89,7 @@ export const PaymentsListPage: React.FC = () => {
       accessorKey: 'bankAccountName',
       header: 'Bank / Cash Account',
       cell: ({ row }) => (
-        <span className="text-xs text-[#697586] truncate max-w-[180px] block">
+        <span className="text-xs text-[#334155] truncate max-w-[180px] block">
           {row.getValue('bankAccountName')}
         </span>
       ),
@@ -98,7 +98,7 @@ export const PaymentsListPage: React.FC = () => {
       accessorKey: 'paymentMethod',
       header: 'Payment Method',
       cell: ({ row }) => (
-        <span className="text-xs text-[#202833]">{row.getValue('paymentMethod')}</span>
+        <span className="text-xs text-[#0F172A]">{row.getValue('paymentMethod')}</span>
       ),
     },
     {
@@ -121,8 +121,8 @@ export const PaymentsListPage: React.FC = () => {
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h2 className="text-xl font-bold text-[#202833]">Payments, Receipts & Treasury</h2>
-          <p className="text-xs text-[#697586]">
+          <h2 className="text-xl font-bold text-[#0F172A]">Payments, Receipts & Treasury</h2>
+          <p className="text-xs text-[#334155]">
             Customer invoice collections, supplier import disbursements, and banking vouchers
           </p>
         </div>
@@ -150,21 +150,21 @@ export const PaymentsListPage: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Total Customer Collections (Inflow)</span>
+            <span className="text-xs text-[#334155]">Total Customer Collections (Inflow)</span>
             <div className="text-xl font-bold font-mono text-[#166534] mt-0.5">
               {formatBDT(totalReceipts)}
             </div>
-            <span className="text-[11px] text-[#697586]">{receipts.length} Receipt Vouchers</span>
+            <span className="text-[11px] text-[#334155]">{receipts.length} Receipt Vouchers</span>
           </CardContent>
         </Card>
 
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Total Supplier Disbursements (Outflow)</span>
-            <div className="text-xl font-bold font-mono text-[#202833] mt-0.5">
+            <span className="text-xs text-[#334155]">Total Supplier Disbursements (Outflow)</span>
+            <div className="text-xl font-bold font-mono text-[#0F172A] mt-0.5">
               {formatBDT(totalDisbursed)}
             </div>
-            <span className="text-[11px] text-[#697586]">{disbursements.length} L/C Settlements</span>
+            <span className="text-[11px] text-[#334155]">{disbursements.length} L/C Settlements</span>
           </CardContent>
         </Card>
       </div>

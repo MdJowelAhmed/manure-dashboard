@@ -83,8 +83,8 @@ export const ReportsHubPage: React.FC = () => {
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-bold text-[#202833]">Financial & Operational Reports Hub</h2>
-        <p className="text-xs text-[#697586]">
+        <h2 className="text-xl font-bold text-[#0F172A]">Financial & Operational Reports Hub</h2>
+        <p className="text-xs text-[#334155]">
           Double-entry statements, trade aging matrices, and inventory valuation derived from central ledger
         </p>
       </div>
@@ -106,10 +106,10 @@ export const ReportsHubPage: React.FC = () => {
                     </div>
                     <ArrowRight className="h-4 w-4 text-[#94A3B8] group-hover:text-[#526B83] transition-colors" />
                   </div>
-                  <h3 className="font-semibold text-sm text-[#202833] group-hover:text-[#526B83] transition-colors leading-snug">
+                  <h3 className="font-semibold text-sm text-[#0F172A] group-hover:text-[#526B83] transition-colors leading-snug">
                     {report.title}
                   </h3>
-                  <p className="text-xs text-[#697586] leading-relaxed">
+                  <p className="text-xs text-[#334155] leading-relaxed">
                     {report.description}
                   </p>
                 </div>

@@ -103,8 +103,8 @@ export const NewPaymentPage: React.FC = () => {
             <ArrowLeft className="h-4 w-4" />
           </Button>
           <div>
-            <h2 className="text-xl font-bold text-[#202833]">Record Payment / Collection Voucher</h2>
-            <p className="text-xs text-[#697586]">
+            <h2 className="text-xl font-bold text-[#0F172A]">Record Payment / Collection Voucher</h2>
+            <p className="text-xs text-[#334155]">
               Post customer bank receipts or international supplier L/C settlements with allocation
             </p>
           </div>

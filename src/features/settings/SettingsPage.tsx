@@ -66,8 +66,8 @@ export const SettingsPage: React.FC = () => {
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h2 className="text-xl font-bold text-[#202833]">System & Enterprise Settings</h2>
-          <p className="text-xs text-[#697586]">
+          <h2 className="text-xl font-bold text-[#0F172A]">System & Enterprise Settings</h2>
+          <p className="text-xs text-[#334155]">
             Company profile, warehouse configurations, accounting period parameters, and audit trails
           </p>
         </div>
@@ -222,10 +222,10 @@ export const SettingsPage: React.FC = () => {
               </div>
 
               <div className="p-4 rounded-xl bg-[#F8FAFC] border border-[#DCE2E8] space-y-2">
-                <h4 className="font-semibold text-xs text-[#202833]">
+                <h4 className="font-semibold text-xs text-[#0F172A]">
                   Single Warehouse Architectural Notice
                 </h4>
-                <p className="text-xs text-[#697586] leading-relaxed">
+                <p className="text-xs text-[#334155] leading-relaxed">
                   Per the business requirements, Meridian operates a centralized distribution model through
                   Khatunganj Central Depot. Multi-warehouse routing and stock transfer workflows are intentionally
                   omitted to maintain an uncluttered enterprise finance interface.
@@ -266,7 +266,7 @@ export const SettingsPage: React.FC = () => {
               </div>
 
               <div className="p-4 rounded-xl bg-[#F8FAFC] border border-[#DCE2E8] space-y-2">
-                <h4 className="font-semibold text-xs text-[#202833]">Standard Unit Conversions</h4>
+                <h4 className="font-semibold text-xs text-[#0F172A]">Standard Unit Conversions</h4>
                 <div className="grid grid-cols-3 gap-2 text-xs font-mono">
                   <div className="p-2 bg-white rounded border border-[#DCE2E8]">1 MT = 1,000 KG</div>
                   <div className="p-2 bg-white rounded border border-[#DCE2E8]">1 MT = 20 Bags (50kg)</div>
@@ -300,17 +300,17 @@ export const SettingsPage: React.FC = () => {
                 <TableBody>
                   {auditLogs.map((log) => (
                     <TableRow key={log.id}>
-                      <TableCell className="font-mono text-xs text-[#697586]">
+                      <TableCell className="font-mono text-xs text-[#334155]">
                         {log.timestamp}
                       </TableCell>
-                      <TableCell className="font-medium text-xs text-[#202833]">{log.user}</TableCell>
+                      <TableCell className="font-medium text-xs text-[#0F172A]">{log.user}</TableCell>
                       <TableCell className="text-xs">
                         <span className="px-2 py-0.5 rounded-md text-[10px] font-medium bg-[#F1F5F9] border border-[#DCE2E8]">
                           {log.module}
                         </span>
                       </TableCell>
                       <TableCell className="font-semibold text-xs text-[#526B83]">{log.action}</TableCell>
-                      <TableCell className="text-xs text-[#697586]">{log.details}</TableCell>
+                      <TableCell className="text-xs text-[#334155]">{log.details}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>

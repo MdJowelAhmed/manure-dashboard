@@ -41,8 +41,8 @@ export const CashFlowPage: React.FC = () => {
             <ArrowLeft className="h-4 w-4" />
           </Button>
           <div>
-            <h2 className="text-xl font-bold text-[#202833]">Statement of Cash Flows</h2>
-            <p className="text-xs text-[#697586]">
+            <h2 className="text-xl font-bold text-[#0F172A]">Statement of Cash Flows</h2>
+            <p className="text-xs text-[#334155]">
               Direct cash inflows from dealer collections and outflows for import procurement and expenses
             </p>
           </div>
@@ -64,17 +64,17 @@ export const CashFlowPage: React.FC = () => {
       <div className="bg-white rounded-xl border border-[#DCE2E8] p-6 sm:p-8 print-card space-y-6">
         <div className="flex justify-between items-start pb-4 border-b border-[#DCE2E8]">
           <div>
-            <h3 className="text-lg font-bold text-[#202833]">{company.companyName}</h3>
-            <p className="text-xs text-[#697586]">{company.headOfficeAddress}</p>
+            <h3 className="text-lg font-bold text-[#0F172A]">{company.companyName}</h3>
+            <p className="text-xs text-[#334155]">{company.headOfficeAddress}</p>
           </div>
           <div className="text-right">
             <span className="text-xs font-bold uppercase tracking-wider text-[#526B83]">
               STATEMENT OF CASH FLOWS
             </span>
-            <div className="text-xs text-[#697586] mt-1">
+            <div className="text-xs text-[#334155] mt-1">
               For Period: <strong>01 July 2025 to 30 June 2026</strong>
             </div>
-            <div className="text-xs text-[#697586]">All figures in Bangladeshi Taka (BDT)</div>
+            <div className="text-xs text-[#334155]">All figures in Bangladeshi Taka (BDT)</div>
           </div>
         </div>
 
@@ -82,30 +82,30 @@ export const CashFlowPage: React.FC = () => {
           <TableBody>
             {/* 1. Operating Activities */}
             <TableRow className="bg-[#F8FAFC] font-bold text-xs">
-              <TableCell colSpan={2} className="text-[#202833] uppercase tracking-wider">
+              <TableCell colSpan={2} className="text-[#0F172A] uppercase tracking-wider">
                 1. CASH FLOWS FROM OPERATING ACTIVITIES
               </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell className="pl-6 text-xs text-[#202833]">Cash Received from Domestic Fertilizer Dealers</TableCell>
+              <TableCell className="pl-6 text-xs text-[#0F172A]">Cash Received from Domestic Fertilizer Dealers</TableCell>
               <TableCell className="text-right font-mono text-xs text-[#166534]">
                 +{formatBDT(customerReceipts)}
               </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell className="pl-6 text-xs text-[#697586]">Cash Paid to International Fertilizer Manufacturers (L/Cs)</TableCell>
+              <TableCell className="pl-6 text-xs text-[#334155]">Cash Paid to International Fertilizer Manufacturers (L/Cs)</TableCell>
               <TableCell className="text-right font-mono text-xs text-[#991B1B]">
                 -{formatBDT(supplierPayments)}
               </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell className="pl-6 text-xs text-[#697586]">Cash Paid for Depot Rent, Salaries & Operating Overhead</TableCell>
+              <TableCell className="pl-6 text-xs text-[#334155]">Cash Paid for Depot Rent, Salaries & Operating Overhead</TableCell>
               <TableCell className="text-right font-mono text-xs text-[#991B1B]">
                 -{formatBDT(opexPaid)}
               </TableCell>
             </TableRow>
             <TableRow className="font-bold border-b-2 border-[#DCE2E8]">
-              <TableCell className="pl-6 text-xs text-[#202833]">Net Cash from Operating Activities</TableCell>
+              <TableCell className="pl-6 text-xs text-[#0F172A]">Net Cash from Operating Activities</TableCell>
               <TableCell className="text-right font-mono font-bold text-xs">
                 {netOperatingCash >= 0 ? `+${formatBDT(netOperatingCash)}` : `-${formatBDT(Math.abs(netOperatingCash))}`}
               </TableCell>
@@ -113,24 +113,24 @@ export const CashFlowPage: React.FC = () => {
 
             {/* 2. Investing & Financing */}
             <TableRow className="bg-[#F8FAFC] font-bold text-xs">
-              <TableCell colSpan={2} className="text-[#202833] uppercase tracking-wider">
+              <TableCell colSpan={2} className="text-[#0F172A] uppercase tracking-wider">
                 2. CASH FLOWS FROM FINANCING ACTIVITIES
               </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell className="pl-6 text-xs text-[#202833]">Owner Capital Contribution</TableCell>
+              <TableCell className="pl-6 text-xs text-[#0F172A]">Owner Capital Contribution</TableCell>
               <TableCell className="text-right font-mono text-xs">৳ 0</TableCell>
             </TableRow>
 
             {/* Reconciliation */}
             <TableRow className="font-bold bg-[#EBF0F5]/50 border-t-2 border-[#CBD5E1] text-xs">
-              <TableCell className="text-xs font-bold text-[#202833]">NET MOVEMENT IN CASH & CASH EQUIVALENTS</TableCell>
+              <TableCell className="text-xs font-bold text-[#0F172A]">NET MOVEMENT IN CASH & CASH EQUIVALENTS</TableCell>
               <TableCell className="text-right font-mono font-bold text-xs">
                 {netOperatingCash >= 0 ? `+${formatBDT(netOperatingCash)}` : `-${formatBDT(Math.abs(netOperatingCash))}`}
               </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell className="pl-6 text-xs text-[#697586]">Cash & Bank Balances at Beginning of Period</TableCell>
+              <TableCell className="pl-6 text-xs text-[#334155]">Cash & Bank Balances at Beginning of Period</TableCell>
               <TableCell className="text-right font-mono text-xs">{formatBDT(openingCash)}</TableCell>
             </TableRow>
             <TableRow className="font-bold bg-[#F0FDF4] border-t border-[#166534] text-sm text-[#166534]">

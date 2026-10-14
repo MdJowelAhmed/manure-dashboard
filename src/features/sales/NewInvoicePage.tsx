@@ -214,8 +214,8 @@ export const NewInvoicePage: React.FC = () => {
             <ArrowLeft className="h-4 w-4" />
           </Button>
           <div>
-            <h2 className="text-xl font-bold text-[#202833]">Create Sales Invoice</h2>
-            <p className="text-xs text-[#697586]">
+            <h2 className="text-xl font-bold text-[#0F172A]">Create Sales Invoice</h2>
+            <p className="text-xs text-[#334155]">
               Issue domestic delivery challan and invoice with automatic inventory deduction
             </p>
           </div>
@@ -266,7 +266,7 @@ export const NewInvoicePage: React.FC = () => {
                     </SelectContent>
                   </Select>
                   {selectedCustomer && (
-                    <div className="text-[11px] text-[#697586] flex justify-between pt-1">
+                    <div className="text-[11px] text-[#334155] flex justify-between pt-1">
                       <span>Credit Limit: {formatBDT(selectedCustomer.creditLimitBDT)}</span>
                       <span>Outstanding Due: {formatBDT(selectedCustomer.outstandingDueBDT)}</span>
                     </div>
@@ -364,9 +364,9 @@ export const NewInvoicePage: React.FC = () => {
                           ))}
                         </SelectContent>
                       </Select>
-                      <div className="flex items-center gap-1 text-[11px] text-[#697586]">
+                      <div className="flex items-center gap-1 text-[11px] text-[#334155]">
                         <span>Available in Depot:</span>
-                        <strong className="text-[#202833]">{item.availableStockMT} MT</strong>
+                        <strong className="text-[#0F172A]">{item.availableStockMT} MT</strong>
                       </div>
                     </div>
 
@@ -427,7 +427,7 @@ export const NewInvoicePage: React.FC = () => {
 
                     <div className="space-y-1">
                       <Label>Line Total</Label>
-                      <div className="h-9 px-3 flex items-center font-mono font-bold text-xs bg-white border border-[#DCE2E8] rounded-lg text-[#202833]">
+                      <div className="h-9 px-3 flex items-center font-mono font-bold text-xs bg-white border border-[#DCE2E8] rounded-lg text-[#0F172A]">
                         {formatBDT(item.totalBDT)}
                       </div>
                     </div>
@@ -466,7 +466,7 @@ export const NewInvoicePage: React.FC = () => {
         <div className="space-y-6">
           <Card className="sticky top-20 border-[#CBD5E1] shadow-sm">
             <CardHeader className="bg-[#F8FAFC] border-b border-[#DCE2E8] pb-3">
-              <CardTitle className="text-sm font-semibold flex items-center gap-2 text-[#202833]">
+              <CardTitle className="text-sm font-semibold flex items-center gap-2 text-[#0F172A]">
                 <Receipt className="h-4 w-4 text-[#526B83]" />
                 Invoice Totals & Settlement
               </CardTitle>
@@ -474,17 +474,17 @@ export const NewInvoicePage: React.FC = () => {
             <CardContent className="p-4 space-y-4">
               <div className="space-y-2 text-xs">
                 <div className="flex justify-between py-1 border-b border-[#F1F5F9]">
-                  <span className="text-[#697586]">Gross Subtotal:</span>
+                  <span className="text-[#334155]">Gross Subtotal:</span>
                   <span className="font-mono font-medium">{formatBDT(subtotalBDT)}</span>
                 </div>
                 <div className="flex justify-between py-1 border-b border-[#F1F5F9]">
-                  <span className="text-[#697586]">Line Discounts:</span>
+                  <span className="text-[#334155]">Line Discounts:</span>
                   <span className="font-mono text-[#991B1B]">
                     {totalItemDiscountBDT > 0 ? `-${formatBDT(totalItemDiscountBDT)}` : '৳ 0'}
                   </span>
                 </div>
                 <div className="flex justify-between items-center py-1 border-b border-[#F1F5F9]">
-                  <span className="text-[#697586]">Advance Income Tax (AIT):</span>
+                  <span className="text-[#334155]">Advance Income Tax (AIT):</span>
                   <Input
                     type="number"
                     value={taxBDT}
@@ -493,7 +493,7 @@ export const NewInvoicePage: React.FC = () => {
                   />
                 </div>
                 <div className="flex justify-between py-2 font-semibold text-base border-t border-[#DCE2E8] pt-2">
-                  <span className="text-[#202833]">Grand Total:</span>
+                  <span className="text-[#0F172A]">Grand Total:</span>
                   <span className="font-mono text-[#526B83]">{formatBDT(totalAmountBDT)}</span>
                 </div>
               </div>
@@ -527,7 +527,7 @@ export const NewInvoicePage: React.FC = () => {
                 </div>
 
                 <div className="p-3 rounded-lg bg-[#F8FAFC] border border-[#DCE2E8] flex justify-between items-center">
-                  <span className="font-semibold text-xs text-[#202833]">Outstanding Due:</span>
+                  <span className="font-semibold text-xs text-[#0F172A]">Outstanding Due:</span>
                   <span className="font-mono font-bold text-sm text-[#991B1B]">
                     {formatBDT(amountDueBDT)}
                   </span>

@@ -26,8 +26,8 @@ export const BalanceSheetPage: React.FC = () => {
             <ArrowLeft className="h-4 w-4" />
           </Button>
           <div>
-            <h2 className="text-xl font-bold text-[#202833]">Statement of Financial Position (Balance Sheet)</h2>
-            <p className="text-xs text-[#697586]">
+            <h2 className="text-xl font-bold text-[#0F172A]">Statement of Financial Position (Balance Sheet)</h2>
+            <p className="text-xs text-[#334155]">
               Assets, liabilities, and proprietor equity rigorously tied to the general ledger
             </p>
           </div>
@@ -64,17 +64,17 @@ export const BalanceSheetPage: React.FC = () => {
       <div className="bg-white rounded-xl border border-[#DCE2E8] p-6 sm:p-8 print-card space-y-6">
         <div className="flex justify-between items-start pb-4 border-b border-[#DCE2E8]">
           <div>
-            <h3 className="text-lg font-bold text-[#202833]">{company.companyName}</h3>
-            <p className="text-xs text-[#697586]">{company.headOfficeAddress}</p>
+            <h3 className="text-lg font-bold text-[#0F172A]">{company.companyName}</h3>
+            <p className="text-xs text-[#334155]">{company.headOfficeAddress}</p>
           </div>
           <div className="text-right">
             <span className="text-xs font-bold uppercase tracking-wider text-[#526B83]">
               BALANCE SHEET STATEMENT
             </span>
-            <div className="text-xs text-[#697586] mt-1">
-              As of: <strong className="text-[#202833]">{formatDate(new Date())}</strong>
+            <div className="text-xs text-[#334155] mt-1">
+              As of: <strong className="text-[#0F172A]">{formatDate(new Date())}</strong>
             </div>
-            <div className="text-xs text-[#697586]">Reporting Currency: BDT</div>
+            <div className="text-xs text-[#334155]">Reporting Currency: BDT</div>
           </div>
         </div>
 
@@ -91,23 +91,23 @@ export const BalanceSheetPage: React.FC = () => {
                   <TableCell colSpan={2}>Current Assets</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className="pl-4 text-xs text-[#202833]">Cash & Bank Operational Balances</TableCell>
+                  <TableCell className="pl-4 text-xs text-[#0F172A]">Cash & Bank Operational Balances</TableCell>
                   <TableCell className="text-right font-mono text-xs">{formatBDT(summary.totalCashAndBankBDT)}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className="pl-4 text-xs text-[#202833]">Accounts Receivable (Trade Debtors)</TableCell>
+                  <TableCell className="pl-4 text-xs text-[#0F172A]">Accounts Receivable (Trade Debtors)</TableCell>
                   <TableCell className="text-right font-mono text-xs">{formatBDT(summary.accountsReceivableBDT)}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className="pl-4 text-xs text-[#202833]">Fertilizer Inventory at Khatunganj Depot</TableCell>
+                  <TableCell className="pl-4 text-xs text-[#0F172A]">Fertilizer Inventory at Khatunganj Depot</TableCell>
                   <TableCell className="text-right font-mono text-xs">{formatBDT(summary.inventoryValueBDT)}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className="pl-4 text-xs text-[#202833]">Goods in Transit & Customs Clearing (L/C)</TableCell>
+                  <TableCell className="pl-4 text-xs text-[#0F172A]">Goods in Transit & Customs Clearing (L/C)</TableCell>
                   <TableCell className="text-right font-mono text-xs">{formatBDT(summary.goodsInTransitBDT)}</TableCell>
                 </TableRow>
                 <TableRow className="font-bold bg-[#EBF0F5]/50 border-t border-[#CBD5E1]">
-                  <TableCell className="text-xs text-[#202833]">TOTAL ASSETS</TableCell>
+                  <TableCell className="text-xs text-[#0F172A]">TOTAL ASSETS</TableCell>
                   <TableCell className="text-right font-mono font-bold text-sm text-[#526B83]">
                     {formatBDT(summary.totalAssetsBDT)}
                   </TableCell>
@@ -128,19 +128,19 @@ export const BalanceSheetPage: React.FC = () => {
                   <TableCell colSpan={2}>Current Liabilities</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className="pl-4 text-xs text-[#202833]">Accounts Payable (International Suppliers)</TableCell>
+                  <TableCell className="pl-4 text-xs text-[#0F172A]">Accounts Payable (International Suppliers)</TableCell>
                   <TableCell className="text-right font-mono text-xs">{formatBDT(summary.accountsPayableBDT)}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className="pl-4 text-xs text-[#202833]">Port & C&F Accrued Charges</TableCell>
+                  <TableCell className="pl-4 text-xs text-[#0F172A]">Port & C&F Accrued Charges</TableCell>
                   <TableCell className="text-right font-mono text-xs">{formatBDT(4500000)}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className="pl-4 text-xs text-[#202833]">Customer Advance Booking Deposits</TableCell>
+                  <TableCell className="pl-4 text-xs text-[#0F172A]">Customer Advance Booking Deposits</TableCell>
                   <TableCell className="text-right font-mono text-xs">{formatBDT(8000000)}</TableCell>
                 </TableRow>
                 <TableRow className="font-semibold border-b border-[#DCE2E8]">
-                  <TableCell className="pl-4 text-xs text-[#202833]">Total Liabilities</TableCell>
+                  <TableCell className="pl-4 text-xs text-[#0F172A]">Total Liabilities</TableCell>
                   <TableCell className="text-right font-mono font-bold text-xs">{formatBDT(summary.totalLiabilitiesBDT)}</TableCell>
                 </TableRow>
 
@@ -148,11 +148,11 @@ export const BalanceSheetPage: React.FC = () => {
                   <TableCell colSpan={2}>Owner's Equity</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className="pl-4 text-xs text-[#202833]">Owner's Paid-in Capital</TableCell>
+                  <TableCell className="pl-4 text-xs text-[#0F172A]">Owner's Paid-in Capital</TableCell>
                   <TableCell className="text-right font-mono text-xs">{formatBDT(260000000)}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell className="pl-4 text-xs text-[#202833]">Retained Earnings (Beginning)</TableCell>
+                  <TableCell className="pl-4 text-xs text-[#0F172A]">Retained Earnings (Beginning)</TableCell>
                   <TableCell className="text-right font-mono text-xs">{formatBDT(15000000)}</TableCell>
                 </TableRow>
                 <TableRow>
@@ -162,12 +162,12 @@ export const BalanceSheetPage: React.FC = () => {
                   </TableCell>
                 </TableRow>
                 <TableRow className="font-semibold border-b border-[#DCE2E8]">
-                  <TableCell className="pl-4 text-xs text-[#202833]">Total Equity</TableCell>
+                  <TableCell className="pl-4 text-xs text-[#0F172A]">Total Equity</TableCell>
                   <TableCell className="text-right font-mono font-bold text-xs">{formatBDT(summary.totalEquityBDT)}</TableCell>
                 </TableRow>
 
                 <TableRow className="font-bold bg-[#EBF0F5]/50 border-t border-[#CBD5E1]">
-                  <TableCell className="text-xs text-[#202833]">TOTAL LIABILITIES & EQUITY</TableCell>
+                  <TableCell className="text-xs text-[#0F172A]">TOTAL LIABILITIES & EQUITY</TableCell>
                   <TableCell className="text-right font-mono font-bold text-sm text-[#526B83]">
                     {formatBDT(summary.totalLiabilitiesBDT + summary.totalEquityBDT)}
                   </TableCell>

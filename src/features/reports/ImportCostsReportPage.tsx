@@ -44,8 +44,8 @@ export const ImportCostsReportPage: React.FC = () => {
             <ArrowLeft className="h-4 w-4" />
           </Button>
           <div>
-            <h2 className="text-xl font-bold text-[#202833]">Import Landed Cost Allocation Analysis</h2>
-            <p className="text-xs text-[#697586]">
+            <h2 className="text-xl font-bold text-[#0F172A]">Import Landed Cost Allocation Analysis</h2>
+            <p className="text-xs text-[#334155]">
               Capitalized procurement costs: FOB purchase, ocean freight, marine insurance, customs, and port charges
             </p>
           </div>
@@ -67,17 +67,17 @@ export const ImportCostsReportPage: React.FC = () => {
       <div className="bg-white rounded-xl border border-[#DCE2E8] p-6 sm:p-8 print-card space-y-6">
         <div className="flex justify-between items-start pb-4 border-b border-[#DCE2E8]">
           <div>
-            <h3 className="text-lg font-bold text-[#202833]">{company.companyName}</h3>
-            <p className="text-xs text-[#697586]">{company.headOfficeAddress}</p>
+            <h3 className="text-lg font-bold text-[#0F172A]">{company.companyName}</h3>
+            <p className="text-xs text-[#334155]">{company.headOfficeAddress}</p>
           </div>
           <div className="text-right">
             <span className="text-xs font-bold uppercase tracking-wider text-[#526B83]">
               LANDED COST ALLOCATION ANALYSIS
             </span>
-            <div className="text-xs text-[#697586] mt-1">
+            <div className="text-xs text-[#334155] mt-1">
               For Period: <strong>FY 2025 – 2026</strong>
             </div>
-            <div className="text-xs text-[#697586]">Allocation Basis: Weight (Metric Tons)</div>
+            <div className="text-xs text-[#334155]">Allocation Basis: Weight (Metric Tons)</div>
           </div>
         </div>
 
@@ -107,7 +107,7 @@ export const ImportCostsReportPage: React.FC = () => {
                   <TableCell className="font-mono font-medium text-xs text-[#526B83]">
                     {imp.importReference}
                   </TableCell>
-                  <TableCell className="text-xs text-[#202833] max-w-[120px] truncate">
+                  <TableCell className="text-xs text-[#0F172A] max-w-[120px] truncate">
                     {imp.supplierName.split(' ')[0]}
                   </TableCell>
                   <TableCell className="text-right font-mono text-xs">
@@ -128,7 +128,7 @@ export const ImportCostsReportPage: React.FC = () => {
                   <TableCell className="text-right font-mono text-xs">
                     {formatBDT(totalAncillary)}
                   </TableCell>
-                  <TableCell className="text-right font-mono font-bold text-xs text-[#202833]">
+                  <TableCell className="text-right font-mono font-bold text-xs text-[#0F172A]">
                     {formatBDT(imp.totalImportCostBDT)}
                   </TableCell>
                   <TableCell className="text-right font-mono font-bold text-xs text-[#0F766E]">

@@ -75,14 +75,14 @@ export const DashboardPage: React.FC = () => {
       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 bg-white p-4 sm:p-5 rounded-xl border border-[#DCE2E8] shadow-xs">
         <div>
           <div className="flex items-center gap-2">
-            <h2 className="text-lg font-semibold text-[#202833]">
+            <h2 className="text-lg font-semibold text-[#0F172A]">
               Business Operations Overview
             </h2>
             <span className="px-2 py-0.5 rounded-full text-[10px] font-medium bg-[#F0FDF4] text-[#166534] border border-[#BBF7D0]">
               Operational • Active FY 25-26
             </span>
           </div>
-          <p className="text-xs text-[#697586] mt-0.5">
+          <p className="text-xs text-[#334155] mt-0.5">
             Sole Depot: Khatunganj Central Depot • International procurement & domestic distribution
           </p>
         </div>
@@ -121,7 +121,7 @@ export const DashboardPage: React.FC = () => {
             onClick={() => navigate('/payments/new')}
             className="text-xs h-8"
           >
-            <Banknote className="h-3.5 w-3.5 text-[#202833]" />
+            <Banknote className="h-3.5 w-3.5 text-[#0F172A]" />
             Record Payment
           </Button>
           <Button
@@ -130,7 +130,7 @@ export const DashboardPage: React.FC = () => {
             onClick={() => navigate('/expenses/new')}
             className="text-xs h-8"
           >
-            <WalletCards className="h-3.5 w-3.5 text-[#697586]" />
+            <WalletCards className="h-3.5 w-3.5 text-[#334155]" />
             Record Expense
           </Button>
         </div>
@@ -185,11 +185,11 @@ export const DashboardPage: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
         <div className="p-4 rounded-xl border border-[#DCE2E8] bg-white flex items-center justify-between">
           <div>
-            <span className="text-xs text-[#697586]">Net Operating Profit</span>
+            <span className="text-xs text-[#334155]">Net Operating Profit</span>
             <div className="text-lg font-bold font-mono text-[#166534]">
               {formatBDT(summary.netProfitBDT)}
             </div>
-            <span className="text-[11px] text-[#697586]">
+            <span className="text-[11px] text-[#334155]">
               Net Margin: {summary.netProfitMargin.toFixed(1)}%
             </span>
           </div>
@@ -200,11 +200,11 @@ export const DashboardPage: React.FC = () => {
 
         <div className="p-4 rounded-xl border border-[#DCE2E8] bg-white flex items-center justify-between">
           <div>
-            <span className="text-xs text-[#697586]">Total Liquid Bank & Cash</span>
-            <div className="text-lg font-bold font-mono text-[#202833]">
+            <span className="text-xs text-[#334155]">Total Liquid Bank & Cash</span>
+            <div className="text-lg font-bold font-mono text-[#0F172A]">
               {formatBDT(summary.totalCashAndBankBDT)}
             </div>
-            <span className="text-[11px] text-[#697586]">Eastern Bank & IBBL A/Cs</span>
+            <span className="text-[11px] text-[#334155]">Eastern Bank & IBBL A/Cs</span>
           </div>
           <div className="h-9 w-9 rounded-lg bg-[#EFF6FF] border border-[#BFDBFE] flex items-center justify-center text-[#1D4ED8]">
             <Banknote className="h-4 w-4" />
@@ -213,12 +213,12 @@ export const DashboardPage: React.FC = () => {
 
         <div className="p-4 rounded-xl border border-[#DCE2E8] bg-white flex items-center justify-between">
           <div>
-            <span className="text-xs text-[#697586]">Trial Balance & Ledger Health</span>
+            <span className="text-xs text-[#334155]">Trial Balance & Ledger Health</span>
             <div className="text-lg font-bold font-mono text-[#0F766E] flex items-center gap-1.5">
               <ShieldCheck className="h-5 w-5" />
               <span>Balanced (0.00 Diff)</span>
             </div>
-            <span className="text-[11px] text-[#697586]">Double-entry integrity checked</span>
+            <span className="text-[11px] text-[#334155]">Double-entry integrity checked</span>
           </div>
           <Button
             variant="outline"
@@ -242,7 +242,7 @@ export const DashboardPage: React.FC = () => {
                 Monthly revenue trend vs. procurement cost and operating expenses (in BDT)
               </CardDescription>
             </div>
-            <span className="text-xs text-[#697586] bg-[#F1F5F9] px-2.5 py-1 rounded-md border border-[#E2E8F0]">
+            <span className="text-xs text-[#334155] bg-[#F1F5F9] px-2.5 py-1 rounded-md border border-[#E2E8F0]">
               6-Month Trend
             </span>
           </CardHeader>
@@ -253,12 +253,12 @@ export const DashboardPage: React.FC = () => {
                   <CartesianGrid strokeDasharray="3 3" stroke="#F1F5F9" vertical={false} />
                   <XAxis
                     dataKey="month"
-                    tick={{ fill: '#697586', fontSize: 11 }}
+                    tick={{ fill: '#334155', fontSize: 11 }}
                     axisLine={{ stroke: '#DCE2E8' }}
                   />
                   <YAxis
                     tickFormatter={(val) => `৳ ${(val / 1000000).toFixed(0)}M`}
-                    tick={{ fill: '#697586', fontSize: 11 }}
+                    tick={{ fill: '#334155', fontSize: 11 }}
                     axisLine={{ stroke: '#DCE2E8' }}
                   />
                   <Tooltip
@@ -297,12 +297,12 @@ export const DashboardPage: React.FC = () => {
                   margin={{ top: 5, right: 20, left: 20, bottom: 5 }}
                 >
                   <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="#F1F5F9" />
-                  <XAxis type="number" tick={{ fill: '#697586', fontSize: 10 }} unit=" MT" />
+                  <XAxis type="number" tick={{ fill: '#334155', fontSize: 10 }} unit=" MT" />
                   <YAxis
                     type="category"
                     dataKey="name"
                     width={75}
-                    tick={{ fill: '#202833', fontSize: 11 }}
+                    tick={{ fill: '#0F172A', fontSize: 11 }}
                   />
                   <Tooltip
                     formatter={(val: any) => [`${val} MT`, 'Available Stock']}
@@ -360,7 +360,7 @@ export const DashboardPage: React.FC = () => {
                     <TableCell className="font-mono font-medium text-[#526B83]">
                       {inv.invoiceNumber}
                     </TableCell>
-                    <TableCell className="font-medium text-[#202833] max-w-[150px] truncate">
+                    <TableCell className="font-medium text-[#0F172A] max-w-[150px] truncate">
                       {inv.customerName}
                     </TableCell>
                     <TableCell className="text-right font-mono font-medium">
@@ -416,10 +416,10 @@ export const DashboardPage: React.FC = () => {
                     <TableCell className="font-mono font-medium text-[#526B83]">
                       {imp.importReference}
                     </TableCell>
-                    <TableCell className="font-medium text-[#202833] max-w-[140px] truncate">
+                    <TableCell className="font-medium text-[#0F172A] max-w-[140px] truncate">
                       {imp.supplierName}
                     </TableCell>
-                    <TableCell className="text-xs text-[#697586]">
+                    <TableCell className="text-xs text-[#334155]">
                       {imp.vesselName}
                       <div className="text-[10px] text-[#94A3B8]">
                         Exp: {formatDate(imp.expectedArrivalDate)}
@@ -469,10 +469,10 @@ export const DashboardPage: React.FC = () => {
                     <TableCell className="font-mono font-medium text-xs">
                       {inv.invoiceNumber}
                     </TableCell>
-                    <TableCell className="text-xs font-medium text-[#202833]">
+                    <TableCell className="text-xs font-medium text-[#0F172A]">
                       {inv.customerName}
                     </TableCell>
-                    <TableCell className="text-xs text-[#697586]">
+                    <TableCell className="text-xs text-[#334155]">
                       {formatDate(inv.dueDate)}
                     </TableCell>
                     <TableCell className="text-right font-mono font-semibold text-[#991B1B]">
@@ -521,13 +521,13 @@ export const DashboardPage: React.FC = () => {
                 {products.map((prod) => (
                   <TableRow key={prod.id}>
                     <TableCell className="font-mono text-xs">{prod.sku}</TableCell>
-                    <TableCell className="font-medium text-xs text-[#202833]">
+                    <TableCell className="font-medium text-xs text-[#0F172A]">
                       {prod.name}
                     </TableCell>
                     <TableCell className="text-right font-mono font-semibold">
                       {prod.stockMT} MT
                     </TableCell>
-                    <TableCell className="text-right font-mono text-xs text-[#697586]">
+                    <TableCell className="text-right font-mono text-xs text-[#334155]">
                       {prod.reorderLevelMT} MT
                     </TableCell>
                     <TableCell>

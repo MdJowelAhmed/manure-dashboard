@@ -73,8 +73,8 @@ export const NewProductPage: React.FC = () => {
             <ArrowLeft className="h-4 w-4" />
           </Button>
           <div>
-            <h2 className="text-xl font-bold text-[#202833]">Add Fertilizer Product</h2>
-            <p className="text-xs text-[#697586]">
+            <h2 className="text-xl font-bold text-[#0F172A]">Add Fertilizer Product</h2>
+            <p className="text-xs text-[#334155]">
               Create new catalog item with packaging unit conversions and safety stock levels
             </p>
           </div>

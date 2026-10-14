@@ -97,7 +97,7 @@ export function DataTable<TData, TValue>({
                       <div
                         className={
                           header.column.getCanSort()
-                            ? 'flex items-center gap-1 cursor-pointer select-none hover:text-[#202833]'
+                            ? 'flex items-center gap-1 cursor-pointer select-none hover:text-[#0F172A]'
                             : ''
                         }
                         onClick={header.column.getToggleSortingHandler()}
@@ -152,21 +152,21 @@ export function DataTable<TData, TValue>({
       </div>
 
       {/* Pagination Controls */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#697586] px-1">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#334155] px-1">
         <div>
           Showing{' '}
-          <span className="font-semibold text-[#202833]">
+          <span className="font-semibold text-[#0F172A]">
             {table.getState().pagination.pageIndex * table.getState().pagination.pageSize + 1}
           </span>{' '}
           to{' '}
-          <span className="font-semibold text-[#202833]">
+          <span className="font-semibold text-[#0F172A]">
             {Math.min(
               (table.getState().pagination.pageIndex + 1) * table.getState().pagination.pageSize,
               table.getFilteredRowModel().rows.length
             )}
           </span>{' '}
           of{' '}
-          <span className="font-semibold text-[#202833]">
+          <span className="font-semibold text-[#0F172A]">
             {table.getFilteredRowModel().rows.length}
           </span>{' '}
           records

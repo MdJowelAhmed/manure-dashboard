@@ -42,8 +42,8 @@ export const AccountingPeriodsPage: React.FC = () => {
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h2 className="text-xl font-bold text-[#202833]">Fiscal Years & Accounting Periods</h2>
-          <p className="text-xs text-[#697586]">
+          <h2 className="text-xl font-bold text-[#0F172A]">Fiscal Years & Accounting Periods</h2>
+          <p className="text-xs text-[#334155]">
             Bangladesh tax year cycle (01 July – 30 June) and annual book closing controls
           </p>
         </div>
@@ -71,10 +71,10 @@ export const AccountingPeriodsPage: React.FC = () => {
             <TableBody>
               {periods.map((p) => (
                 <TableRow key={p.id}>
-                  <TableCell className="font-semibold text-xs text-[#202833]">
+                  <TableCell className="font-semibold text-xs text-[#0F172A]">
                     {p.name}
                   </TableCell>
-                  <TableCell className="text-xs text-[#697586]">
+                  <TableCell className="text-xs text-[#334155]">
                     {p.startDate} — {p.endDate}
                   </TableCell>
                   <TableCell>
@@ -88,8 +88,8 @@ export const AccountingPeriodsPage: React.FC = () => {
                       </span>
                     )}
                   </TableCell>
-                  <TableCell className="text-xs text-[#202833]">{p.audited}</TableCell>
-                  <TableCell className="text-xs text-[#697586]">{p.taxFiling}</TableCell>
+                  <TableCell className="text-xs text-[#0F172A]">{p.audited}</TableCell>
+                  <TableCell className="text-xs text-[#334155]">{p.taxFiling}</TableCell>
                   <TableCell>
                     {p.status === 'Closed' ? (
                       <span className="inline-flex items-center gap-1 text-[11px] text-[#991B1B]">

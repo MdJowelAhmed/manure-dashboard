@@ -36,8 +36,8 @@ export const SalesListPage: React.FC = () => {
       header: 'Customer / District',
       cell: ({ row }) => (
         <div className="flex flex-col">
-          <span className="font-semibold text-xs text-[#202833]">{row.original.customerName}</span>
-          <span className="text-[11px] text-[#697586]">{row.original.customerDistrict}</span>
+          <span className="font-semibold text-xs text-[#0F172A]">{row.original.customerName}</span>
+          <span className="text-[11px] text-[#334155]">{row.original.customerDistrict}</span>
         </div>
       ),
     },
@@ -78,7 +78,7 @@ export const SalesListPage: React.FC = () => {
       accessorKey: 'totalAmountBDT',
       header: 'Total (BDT)',
       cell: ({ row }) => (
-        <span className="font-mono font-bold text-xs text-[#202833] text-right block">
+        <span className="font-mono font-bold text-xs text-[#0F172A] text-right block">
           {formatBDT(row.original.totalAmountBDT)}
         </span>
       ),
@@ -91,7 +91,7 @@ export const SalesListPage: React.FC = () => {
         return (
           <span
             className={`font-mono font-bold text-xs text-right block ${
-              due > 0 ? 'text-[#991B1B]' : 'text-[#697586]'
+              due > 0 ? 'text-[#991B1B]' : 'text-[#334155]'
             }`}
           >
             {due > 0 ? formatBDT(due) : '—'}
@@ -140,8 +140,8 @@ export const SalesListPage: React.FC = () => {
       {/* Page Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h2 className="text-xl font-bold text-[#202833]">Domestic Sales Invoices</h2>
-          <p className="text-xs text-[#697586]">
+          <h2 className="text-xl font-bold text-[#0F172A]">Domestic Sales Invoices</h2>
+          <p className="text-xs text-[#334155]">
             Fertilizer distribution delivery challans, billing, payment status, and receivables
           </p>
         </div>
@@ -170,41 +170,41 @@ export const SalesListPage: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Total Billed Volume</span>
-            <div className="text-xl font-bold font-mono text-[#202833] mt-0.5">
+            <span className="text-xs text-[#334155]">Total Billed Volume</span>
+            <div className="text-xl font-bold font-mono text-[#0F172A] mt-0.5">
               {formatBDT(totalSales)}
             </div>
-            <span className="text-[11px] text-[#697586]">{invoices.length} Invoices Issued</span>
+            <span className="text-[11px] text-[#334155]">{invoices.length} Invoices Issued</span>
           </CardContent>
         </Card>
 
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Collections Received</span>
+            <span className="text-xs text-[#334155]">Collections Received</span>
             <div className="text-xl font-bold font-mono text-[#166534] mt-0.5">
               {formatBDT(totalPaid)}
             </div>
-            <span className="text-[11px] text-[#697586]">Deposited to Eastern Bank Ops</span>
+            <span className="text-[11px] text-[#334155]">Deposited to Eastern Bank Ops</span>
           </CardContent>
         </Card>
 
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Outstanding Receivables</span>
+            <span className="text-xs text-[#334155]">Outstanding Receivables</span>
             <div className="text-xl font-bold font-mono text-[#991B1B] mt-0.5">
               {formatBDT(totalDue)}
             </div>
-            <span className="text-[11px] text-[#697586]">Dealers and regional distributors</span>
+            <span className="text-[11px] text-[#334155]">Dealers and regional distributors</span>
           </CardContent>
         </Card>
 
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Overdue Accounts</span>
+            <span className="text-xs text-[#334155]">Overdue Accounts</span>
             <div className="text-xl font-bold font-mono text-[#B45309] mt-0.5">
               {overdueCount} Invoices
             </div>
-            <span className="text-[11px] text-[#697586]">Exceeded payment credit window</span>
+            <span className="text-[11px] text-[#334155]">Exceeded payment credit window</span>
           </CardContent>
         </Card>
       </div>

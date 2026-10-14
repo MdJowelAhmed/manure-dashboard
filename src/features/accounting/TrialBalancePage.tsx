@@ -50,8 +50,8 @@ export const TrialBalancePage: React.FC = () => {
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 no-print">
         <div>
-          <h2 className="text-xl font-bold text-[#202833]">Trial Balance Verification</h2>
-          <p className="text-xs text-[#697586]">
+          <h2 className="text-xl font-bold text-[#0F172A]">Trial Balance Verification</h2>
+          <p className="text-xs text-[#334155]">
             Mathematically coherent audit statement verifying equality of total debits and credits
           </p>
         </div>
@@ -102,17 +102,17 @@ export const TrialBalancePage: React.FC = () => {
       <div className="bg-white rounded-xl border border-[#DCE2E8] p-6 sm:p-8 print-card space-y-6">
         <div className="flex justify-between items-start pb-4 border-b border-[#DCE2E8]">
           <div>
-            <h3 className="text-lg font-bold text-[#202833]">{company.companyName}</h3>
-            <p className="text-xs text-[#697586]">{company.headOfficeAddress}</p>
+            <h3 className="text-lg font-bold text-[#0F172A]">{company.companyName}</h3>
+            <p className="text-xs text-[#334155]">{company.headOfficeAddress}</p>
           </div>
           <div className="text-right">
             <span className="text-xs font-bold uppercase tracking-wider text-[#526B83]">
               TRIAL BALANCE
             </span>
-            <div className="text-xs text-[#697586] mt-1">
-              As of: <strong className="text-[#202833]">{formatDate(new Date())}</strong>
+            <div className="text-xs text-[#334155] mt-1">
+              As of: <strong className="text-[#0F172A]">{formatDate(new Date())}</strong>
             </div>
-            <div className="text-xs text-[#697586]">Currency: BDT (Bangladeshi Taka)</div>
+            <div className="text-xs text-[#334155]">Currency: BDT (Bangladeshi Taka)</div>
           </div>
         </div>
 
@@ -132,8 +132,8 @@ export const TrialBalancePage: React.FC = () => {
                 <TableCell className="font-mono font-medium text-xs text-[#526B83]">
                   {row.code}
                 </TableCell>
-                <TableCell className="font-semibold text-xs text-[#202833]">{row.name}</TableCell>
-                <TableCell className="text-xs text-[#697586]">{row.type}</TableCell>
+                <TableCell className="font-semibold text-xs text-[#0F172A]">{row.name}</TableCell>
+                <TableCell className="text-xs text-[#334155]">{row.type}</TableCell>
                 <TableCell className="text-right font-mono text-xs">
                   {row.debitBDT > 0 ? formatBDT(row.debitBDT) : '—'}
                 </TableCell>
@@ -147,10 +147,10 @@ export const TrialBalancePage: React.FC = () => {
               <TableCell colSpan={3} className="text-right">
                 Total Balanced:
               </TableCell>
-              <TableCell className="text-right font-mono font-bold text-[#202833]">
+              <TableCell className="text-right font-mono font-bold text-[#0F172A]">
                 {formatBDT(totalDebit)}
               </TableCell>
-              <TableCell className="text-right font-mono font-bold text-[#202833]">
+              <TableCell className="text-right font-mono font-bold text-[#0F172A]">
                 {formatBDT(totalCredit)}
               </TableCell>
             </TableRow>

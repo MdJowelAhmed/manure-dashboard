@@ -78,7 +78,7 @@ export const StockAdjustmentsPage: React.FC = () => {
       accessorKey: 'productName',
       header: 'Product',
       cell: ({ row }) => (
-        <span className="font-medium text-xs text-[#202833]">
+        <span className="font-medium text-xs text-[#0F172A]">
           {row.getValue('productName')}
         </span>
       ),
@@ -112,7 +112,7 @@ export const StockAdjustmentsPage: React.FC = () => {
       id: 'costImpact',
       header: 'Financial Impact',
       cell: ({ row }) => (
-        <span className="font-mono text-xs text-[#697586]">
+        <span className="font-mono text-xs text-[#334155]">
           {formatBDT(Math.abs(row.original.quantityMT * row.original.unitCostBDT))}
         </span>
       ),
@@ -121,7 +121,7 @@ export const StockAdjustmentsPage: React.FC = () => {
       accessorKey: 'reason',
       header: 'Audit Reason',
       cell: ({ row }) => (
-        <span className="text-xs text-[#697586] max-w-[250px] truncate block">
+        <span className="text-xs text-[#334155] max-w-[250px] truncate block">
           {row.getValue('reason')}
         </span>
       ),
@@ -139,8 +139,8 @@ export const StockAdjustmentsPage: React.FC = () => {
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h2 className="text-xl font-bold text-[#202833]">Stock Adjustments & Variance Reconciliations</h2>
-          <p className="text-xs text-[#697586]">
+          <h2 className="text-xl font-bold text-[#0F172A]">Stock Adjustments & Variance Reconciliations</h2>
+          <p className="text-xs text-[#334155]">
             Record physical stock count reconciliations, bagging dust losses, and moisture adjustments
           </p>
         </div>
@@ -220,7 +220,7 @@ export const StockAdjustmentsPage: React.FC = () => {
                   onChange={(e) => setQuantityMT(Number(e.target.value))}
                   required
                 />
-                <span className="text-[11px] text-[#697586]">
+                <span className="text-[11px] text-[#334155]">
                   Enter negative for reduction (e.g. -5 MT), positive for addition (e.g. +2 MT).
                 </span>
               </div>

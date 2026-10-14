@@ -21,8 +21,8 @@ export const CashBankPage: React.FC = () => {
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h2 className="text-xl font-bold text-[#202833]">Cash & Bank Account Balances</h2>
-          <p className="text-xs text-[#697586]">
+          <h2 className="text-xl font-bold text-[#0F172A]">Cash & Bank Account Balances</h2>
+          <p className="text-xs text-[#334155]">
             Treasury accounts, operational bank books, import L/C lines, and Khatunganj depot petty cash
           </p>
         </div>
@@ -41,8 +41,8 @@ export const CashBankPage: React.FC = () => {
       {/* Total Liquidity Callout Banner */}
       <div className="p-5 rounded-xl border border-[#DCE2E8] bg-white flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-xs">
         <div>
-          <span className="text-xs text-[#697586]">Total Liquid Treasury Funds</span>
-          <div className="text-2xl font-bold font-mono text-[#202833] mt-0.5">
+          <span className="text-xs text-[#334155]">Total Liquid Treasury Funds</span>
+          <div className="text-2xl font-bold font-mono text-[#0F172A] mt-0.5">
             {formatBDT(totalLiquidity)}
           </div>
           <span className="text-xs text-[#166534]">
@@ -62,7 +62,7 @@ export const CashBankPage: React.FC = () => {
           <Card key={acc.id} className="relative overflow-hidden">
             <CardContent className="p-5 space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-[11px] font-semibold uppercase tracking-wider text-[#697586]">
+                <span className="text-[11px] font-semibold uppercase tracking-wider text-[#334155]">
                   {acc.accountType} Account
                 </span>
                 <div className="h-7 w-7 rounded-md bg-[#F1F5F9] flex items-center justify-center text-[#526B83]">
@@ -75,14 +75,14 @@ export const CashBankPage: React.FC = () => {
               </div>
 
               <div>
-                <h4 className="text-sm font-bold text-[#202833] leading-tight">{acc.accountName}</h4>
+                <h4 className="text-sm font-bold text-[#0F172A] leading-tight">{acc.accountName}</h4>
                 <p className="text-xs font-mono text-[#526B83] mt-0.5">{acc.accountNumber}</p>
-                <p className="text-[11px] text-[#697586] mt-0.5">{acc.branch}</p>
+                <p className="text-[11px] text-[#334155] mt-0.5">{acc.branch}</p>
               </div>
 
               <div className="pt-2 border-t border-[#F1F5F9]">
-                <span className="text-[11px] text-[#697586]">Current Balance:</span>
-                <div className="text-lg font-bold font-mono text-[#202833]">
+                <span className="text-[11px] text-[#334155]">Current Balance:</span>
+                <div className="text-lg font-bold font-mono text-[#0F172A]">
                   {formatBDT(acc.currentBalanceBDT)}
                 </div>
               </div>
@@ -122,16 +122,16 @@ export const CashBankPage: React.FC = () => {
                       {p.paymentNumber}
                     </TableCell>
                     <TableCell className="text-xs">{p.bankAccountName}</TableCell>
-                    <TableCell className="font-medium text-xs text-[#202833]">
+                    <TableCell className="font-medium text-xs text-[#0F172A]">
                       {p.partyName}
                     </TableCell>
-                    <TableCell className="text-xs text-[#697586]">
+                    <TableCell className="text-xs text-[#334155]">
                       {p.paymentMethod} • <span className="font-mono">{p.referenceNumber}</span>
                     </TableCell>
                     <TableCell className="text-right font-mono font-bold text-xs text-[#166534]">
                       {isReceipt ? formatBDT(p.amountBDT) : '—'}
                     </TableCell>
-                    <TableCell className="text-right font-mono font-bold text-xs text-[#202833]">
+                    <TableCell className="text-right font-mono font-bold text-xs text-[#0F172A]">
                       {!isReceipt ? formatBDT(p.amountBDT) : '—'}
                     </TableCell>
                   </TableRow>

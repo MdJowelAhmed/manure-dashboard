@@ -53,12 +53,12 @@ export const InvoiceDetailPage: React.FC = () => {
           </Button>
           <div>
             <div className="flex items-center gap-2.5">
-              <h2 className="text-xl font-bold font-mono text-[#202833]">
+              <h2 className="text-xl font-bold font-mono text-[#0F172A]">
                 {invoice.invoiceNumber}
               </h2>
               <StatusBadge status={invoice.status} />
             </div>
-            <p className="text-xs text-[#697586]">
+            <p className="text-xs text-[#334155]">
               Customer: {invoice.customerName} • Challan: {invoice.deliveryChallanNo}
             </p>
           </div>
@@ -96,12 +96,12 @@ export const InvoiceDetailPage: React.FC = () => {
               <div className="h-8 w-8 rounded-lg bg-[#526B83] text-white flex items-center justify-center font-bold text-sm">
                 M
               </div>
-              <h3 className="text-lg font-bold text-[#202833]">{company.companyName}</h3>
+              <h3 className="text-lg font-bold text-[#0F172A]">{company.companyName}</h3>
             </div>
-            <p className="text-xs text-[#697586] mt-1 max-w-sm">
+            <p className="text-xs text-[#334155] mt-1 max-w-sm">
               {company.headOfficeAddress}
             </p>
-            <div className="text-[11px] text-[#697586] mt-1 space-x-3">
+            <div className="text-[11px] text-[#334155] mt-1 space-x-3">
               <span>BIN: {company.binNumber}</span>
               <span>TIN: {company.tinNumber}</span>
               <span>Trade Lic: {company.tradeLicense}</span>
@@ -112,13 +112,13 @@ export const InvoiceDetailPage: React.FC = () => {
             <span className="text-xs font-bold uppercase tracking-wider text-[#526B83]">
               COMMERCIAL SALES INVOICE
             </span>
-            <div className="text-xl font-bold font-mono text-[#202833] mt-0.5">
+            <div className="text-xl font-bold font-mono text-[#0F172A] mt-0.5">
               {invoice.invoiceNumber}
             </div>
-            <div className="text-xs text-[#697586] mt-1 space-y-0.5">
-              <div>Invoice Date: <strong className="text-[#202833]">{formatDate(invoice.invoiceDate)}</strong></div>
-              <div>Due Date: <strong className="text-[#202833]">{formatDate(invoice.dueDate)}</strong></div>
-              <div>Delivery Challan: <strong className="font-mono text-[#202833]">{invoice.deliveryChallanNo}</strong></div>
+            <div className="text-xs text-[#334155] mt-1 space-y-0.5">
+              <div>Invoice Date: <strong className="text-[#0F172A]">{formatDate(invoice.invoiceDate)}</strong></div>
+              <div>Due Date: <strong className="text-[#0F172A]">{formatDate(invoice.dueDate)}</strong></div>
+              <div>Delivery Challan: <strong className="font-mono text-[#0F172A]">{invoice.deliveryChallanNo}</strong></div>
             </div>
           </div>
         </div>
@@ -129,13 +129,13 @@ export const InvoiceDetailPage: React.FC = () => {
             <span className="font-bold uppercase tracking-wider text-[10px] text-[#94A3B8]">
               Bill To / Consignee:
             </span>
-            <h4 className="font-semibold text-sm text-[#202833]">{invoice.customerName}</h4>
-            <p className="text-[#697586]">{customer?.address || invoice.customerDistrict}</p>
-            <div className="text-[#697586] pt-1">
+            <h4 className="font-semibold text-sm text-[#0F172A]">{invoice.customerName}</h4>
+            <p className="text-[#334155]">{customer?.address || invoice.customerDistrict}</p>
+            <div className="text-[#334155] pt-1">
               <span>Contact: {customer?.contactPerson}</span> • <span>Phone: {customer?.phone}</span>
             </div>
             {customer?.tradeLicenseNo && (
-              <div className="text-[11px] text-[#697586]">
+              <div className="text-[11px] text-[#334155]">
                 Trade Lic: {customer.tradeLicenseNo}
               </div>
             )}
@@ -145,12 +145,12 @@ export const InvoiceDetailPage: React.FC = () => {
             <span className="font-bold uppercase tracking-wider text-[10px] text-[#94A3B8]">
               Dispatch Warehouse & Logistics:
             </span>
-            <h4 className="font-semibold text-sm text-[#202833]">{company.warehouseName}</h4>
-            <p className="text-[#697586]">{company.warehouseAddress}</p>
-            <div className="text-[#697586] pt-1">
+            <h4 className="font-semibold text-sm text-[#0F172A]">{company.warehouseName}</h4>
+            <p className="text-[#334155]">{company.warehouseAddress}</p>
+            <div className="text-[#334155] pt-1">
               <span>Warehouse Status: Stock Deducted & Dispatched</span>
             </div>
-            <div className="text-[11px] text-[#697586]">
+            <div className="text-[11px] text-[#334155]">
               Payment Terms: {invoice.paymentMethod || 'Bank Transfer / RTGS'}
             </div>
           </div>
@@ -173,21 +173,21 @@ export const InvoiceDetailPage: React.FC = () => {
             <TableBody>
               {invoice.items.map((it, idx) => (
                 <TableRow key={it.id}>
-                  <TableCell className="text-xs text-[#697586] font-mono">{idx + 1}</TableCell>
-                  <TableCell className="font-medium text-xs text-[#202833]">
+                  <TableCell className="text-xs text-[#334155] font-mono">{idx + 1}</TableCell>
+                  <TableCell className="font-medium text-xs text-[#0F172A]">
                     {it.productName}
                   </TableCell>
                   <TableCell className="text-right font-mono font-bold text-xs">
                     {it.quantity}
                   </TableCell>
-                  <TableCell className="text-xs text-[#697586]">{it.unit}</TableCell>
+                  <TableCell className="text-xs text-[#334155]">{it.unit}</TableCell>
                   <TableCell className="text-right font-mono text-xs">
                     ৳ {it.unitPriceBDT.toLocaleString()}
                   </TableCell>
-                  <TableCell className="text-right font-mono text-xs text-[#697586]">
+                  <TableCell className="text-right font-mono text-xs text-[#334155]">
                     {it.discountBDT > 0 ? `৳ ${it.discountBDT.toLocaleString()}` : '—'}
                   </TableCell>
-                  <TableCell className="text-right font-mono font-bold text-xs text-[#202833]">
+                  <TableCell className="text-right font-mono font-bold text-xs text-[#0F172A]">
                     {formatBDT(it.totalBDT)}
                   </TableCell>
                 </TableRow>
@@ -198,8 +198,8 @@ export const InvoiceDetailPage: React.FC = () => {
 
         {/* Invoice Totals Summary */}
         <div className="flex flex-col sm:flex-row justify-between items-start gap-6 pt-2">
-          <div className="max-w-md text-xs text-[#697586] space-y-1">
-            <span className="font-semibold text-[#202833]">Notes / Declarations:</span>
+          <div className="max-w-md text-xs text-[#334155] space-y-1">
+            <span className="font-semibold text-[#0F172A]">Notes / Declarations:</span>
             <p className="leading-relaxed">
               {invoice.notes ||
                 'Fertilizer delivered in original importer bags. Please verify bag count and quality upon gate pass clearance. Outstanding dues are payable via Eastern Bank PLC RTGS.'}
@@ -208,23 +208,23 @@ export const InvoiceDetailPage: React.FC = () => {
 
           <div className="w-full sm:w-80 space-y-2 text-xs">
             <div className="flex justify-between py-1 border-b border-[#F1F5F9]">
-              <span className="text-[#697586]">Subtotal:</span>
+              <span className="text-[#334155]">Subtotal:</span>
               <span className="font-mono font-medium">{formatBDT(invoice.subtotalBDT)}</span>
             </div>
             {invoice.discountBDT > 0 && (
               <div className="flex justify-between py-1 border-b border-[#F1F5F9]">
-                <span className="text-[#697586]">Discount:</span>
+                <span className="text-[#334155]">Discount:</span>
                 <span className="font-mono text-[#991B1B]">-{formatBDT(invoice.discountBDT)}</span>
               </div>
             )}
             {invoice.taxBDT > 0 && (
               <div className="flex justify-between py-1 border-b border-[#F1F5F9]">
-                <span className="text-[#697586]">Advance Tax (AIT):</span>
+                <span className="text-[#334155]">Advance Tax (AIT):</span>
                 <span className="font-mono font-medium">{formatBDT(invoice.taxBDT)}</span>
               </div>
             )}
             <div className="flex justify-between py-2 text-sm font-bold border-t border-[#DCE2E8]">
-              <span className="text-[#202833]">Grand Total (BDT):</span>
+              <span className="text-[#0F172A]">Grand Total (BDT):</span>
               <span className="font-mono text-[#526B83]">{formatBDT(invoice.totalAmountBDT)}</span>
             </div>
             <div className="flex justify-between py-1 border-t border-[#F1F5F9] text-[#166534]">
@@ -241,11 +241,11 @@ export const InvoiceDetailPage: React.FC = () => {
         {/* Linked Double-Entry Journal Entry Box (Shown on screen) */}
         <div className="pt-6 border-t border-[#DCE2E8] no-print space-y-3">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-semibold text-[#202833] flex items-center gap-1.5">
+            <span className="text-xs font-semibold text-[#0F172A] flex items-center gap-1.5">
               <FileText className="h-4 w-4 text-[#526B83]" />
               Linked Accounting Entries (Automated Journal)
             </span>
-            <span className="text-[11px] text-[#697586]">Source: Sales Invoice Posting</span>
+            <span className="text-[11px] text-[#334155]">Source: Sales Invoice Posting</span>
           </div>
 
           <div className="p-3.5 rounded-xl border border-[#DCE2E8] bg-[#F8FAFC]">
@@ -282,7 +282,7 @@ export const InvoiceDetailPage: React.FC = () => {
         </div>
 
         {/* Signature Line for Print */}
-        <div className="pt-16 grid grid-cols-2 gap-8 text-center text-xs text-[#697586] print-only hidden">
+        <div className="pt-16 grid grid-cols-2 gap-8 text-center text-xs text-[#334155] print-only hidden">
           <div>
             <div className="border-t border-[#CBD5E1] pt-1">Received in Good Condition (Customer)</div>
           </div>

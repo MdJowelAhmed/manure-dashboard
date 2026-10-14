@@ -62,8 +62,8 @@ export const ReceivablesAgingPage: React.FC = () => {
             <ArrowLeft className="h-4 w-4" />
           </Button>
           <div>
-            <h2 className="text-xl font-bold text-[#202833]">Accounts Receivable (A/R) Aging Report</h2>
-            <p className="text-xs text-[#697586]">
+            <h2 className="text-xl font-bold text-[#0F172A]">Accounts Receivable (A/R) Aging Report</h2>
+            <p className="text-xs text-[#334155]">
               Dealer credit aging buckets (0–30, 31–60, 61–90, and 90+ days) and collection risk exposure
             </p>
           </div>
@@ -85,17 +85,17 @@ export const ReceivablesAgingPage: React.FC = () => {
       <div className="bg-white rounded-xl border border-[#DCE2E8] p-6 sm:p-8 print-card space-y-6">
         <div className="flex justify-between items-start pb-4 border-b border-[#DCE2E8]">
           <div>
-            <h3 className="text-lg font-bold text-[#202833]">{company.companyName}</h3>
-            <p className="text-xs text-[#697586]">{company.headOfficeAddress}</p>
+            <h3 className="text-lg font-bold text-[#0F172A]">{company.companyName}</h3>
+            <p className="text-xs text-[#334155]">{company.headOfficeAddress}</p>
           </div>
           <div className="text-right">
             <span className="text-xs font-bold uppercase tracking-wider text-[#526B83]">
               RECEIVABLES AGING SCHEDULE
             </span>
-            <div className="text-xs text-[#697586] mt-1">
-              As of: <strong className="text-[#202833]">{formatDate(new Date())}</strong>
+            <div className="text-xs text-[#334155] mt-1">
+              As of: <strong className="text-[#0F172A]">{formatDate(new Date())}</strong>
             </div>
-            <div className="text-xs text-[#697586]">Payment Terms: Standard 30 Days Credit</div>
+            <div className="text-xs text-[#334155]">Payment Terms: Standard 30 Days Credit</div>
           </div>
         </div>
 
@@ -119,10 +119,10 @@ export const ReceivablesAgingPage: React.FC = () => {
                 <TableCell className="font-mono font-medium text-xs text-[#526B83]">
                   {row.code}
                 </TableCell>
-                <TableCell className="font-semibold text-xs text-[#202833]">
+                <TableCell className="font-semibold text-xs text-[#0F172A]">
                   {row.name}
                 </TableCell>
-                <TableCell className="text-xs text-[#697586]">{row.district}</TableCell>
+                <TableCell className="text-xs text-[#334155]">{row.district}</TableCell>
                 <TableCell className="text-right font-mono text-xs">
                   {row.current0_30 > 0 ? formatBDT(row.current0_30) : '—'}
                 </TableCell>
@@ -135,7 +135,7 @@ export const ReceivablesAgingPage: React.FC = () => {
                 <TableCell className="text-right font-mono text-xs text-[#991B1B]">
                   {row.days90Plus > 0 ? formatBDT(row.days90Plus) : '—'}
                 </TableCell>
-                <TableCell className="text-right font-mono font-bold text-xs text-[#202833]">
+                <TableCell className="text-right font-mono font-bold text-xs text-[#0F172A]">
                   {row.outstandingDueBDT > 0 ? formatBDT(row.outstandingDueBDT) : '৳ 0'}
                 </TableCell>
                 <TableCell>
@@ -158,7 +158,7 @@ export const ReceivablesAgingPage: React.FC = () => {
               <TableCell className="text-right font-mono font-bold text-[#991B1B]">
                 {formatBDT(total90Plus)}
               </TableCell>
-              <TableCell className="text-right font-mono font-bold text-sm text-[#202833]">
+              <TableCell className="text-right font-mono font-bold text-sm text-[#0F172A]">
                 {formatBDT(grandTotalDue)}
               </TableCell>
               <TableCell></TableCell>

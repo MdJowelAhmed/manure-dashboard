@@ -21,7 +21,7 @@ export const StockMovementsPage: React.FC = () => {
       accessorKey: 'productName',
       header: 'Fertilizer Product',
       cell: ({ row }) => (
-        <span className="font-semibold text-xs text-[#202833]">
+        <span className="font-semibold text-xs text-[#0F172A]">
           {row.getValue('productName')}
         </span>
       ),
@@ -72,7 +72,7 @@ export const StockMovementsPage: React.FC = () => {
       accessorKey: 'balanceAfterMT',
       header: 'Balance After (MT)',
       cell: ({ row }) => (
-        <span className="font-mono font-bold text-xs text-[#202833]">
+        <span className="font-mono font-bold text-xs text-[#0F172A]">
           {row.getValue('balanceAfterMT')} MT
         </span>
       ),
@@ -81,7 +81,7 @@ export const StockMovementsPage: React.FC = () => {
       accessorKey: 'notes',
       header: 'Movement Details',
       cell: ({ row }) => (
-        <span className="text-xs text-[#697586]">{row.getValue('notes') || '—'}</span>
+        <span className="text-xs text-[#334155]">{row.getValue('notes') || '—'}</span>
       ),
     },
   ]
@@ -90,8 +90,8 @@ export const StockMovementsPage: React.FC = () => {
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h2 className="text-xl font-bold text-[#202833]">Inventory Stock Movements</h2>
-          <p className="text-xs text-[#697586]">
+          <h2 className="text-xl font-bold text-[#0F172A]">Inventory Stock Movements</h2>
+          <p className="text-xs text-[#334155]">
             Immutable chronological audit log of physical stock intake, delivery dispatch, and adjustments
           </p>
         </div>

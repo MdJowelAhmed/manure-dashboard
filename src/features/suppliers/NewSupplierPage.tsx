@@ -67,8 +67,8 @@ export const NewSupplierPage: React.FC = () => {
             <ArrowLeft className="h-4 w-4" />
           </Button>
           <div>
-            <h2 className="text-xl font-bold text-[#202833]">Register International Supplier</h2>
-            <p className="text-xs text-[#697586]">
+            <h2 className="text-xl font-bold text-[#0F172A]">Register International Supplier</h2>
+            <p className="text-xs text-[#334155]">
               Add global fertilizer manufacturer or trading partner and trade finance terms
             </p>
           </div>

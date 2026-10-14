@@ -40,8 +40,8 @@ export const ImportsListPage: React.FC = () => {
         const item = row.original
         return (
           <div className="flex flex-col">
-            <span className="font-medium text-[#202833]">{item.supplierName}</span>
-            <span className="text-[11px] text-[#697586]">BL: {item.billOfLadingNo}</span>
+            <span className="font-medium text-[#0F172A]">{item.supplierName}</span>
+            <span className="text-[11px] text-[#334155]">BL: {item.billOfLadingNo}</span>
           </div>
         )
       },
@@ -53,8 +53,8 @@ export const ImportsListPage: React.FC = () => {
         const item = row.original
         return (
           <div className="flex flex-col">
-            <span className="text-xs text-[#202833]">{item.vesselName}</span>
-            <span className="text-[11px] text-[#697586]">
+            <span className="text-xs text-[#0F172A]">{item.vesselName}</span>
+            <span className="text-[11px] text-[#334155]">
               Order: {formatDate(item.orderDate)} • ETA: {formatDate(item.expectedArrivalDate)}
             </span>
           </div>
@@ -82,10 +82,10 @@ export const ImportsListPage: React.FC = () => {
       header: 'Total Landed Cost',
       cell: ({ row }) => (
         <div className="flex flex-col text-right font-mono">
-          <span className="font-semibold text-[#202833]">
+          <span className="font-semibold text-[#0F172A]">
             {formatBDT(row.original.totalImportCostBDT)}
           </span>
-          <span className="text-[10px] text-[#697586]">
+          <span className="text-[10px] text-[#334155]">
             Due: {formatBDT(row.original.balanceDueBDT)}
           </span>
         </div>
@@ -132,8 +132,8 @@ export const ImportsListPage: React.FC = () => {
       {/* Page Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h2 className="text-xl font-bold text-[#202833]">Import Shipments & Procurement</h2>
-          <p className="text-xs text-[#697586]">
+          <h2 className="text-xl font-bold text-[#0F172A]">Import Shipments & Procurement</h2>
+          <p className="text-xs text-[#334155]">
             Manage international supplier orders, customs clearing, landed cost allocations, and port arrivals
           </p>
         </div>
@@ -152,41 +152,41 @@ export const ImportsListPage: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Total Procurement Volume</span>
-            <div className="text-xl font-bold font-mono text-[#202833] mt-0.5">
+            <span className="text-xs text-[#334155]">Total Procurement Volume</span>
+            <div className="text-xl font-bold font-mono text-[#0F172A] mt-0.5">
               {formatBDT(totalImportCost)}
             </div>
-            <span className="text-[11px] text-[#697586]">{imports.length} Consignments Total</span>
+            <span className="text-[11px] text-[#334155]">{imports.length} Consignments Total</span>
           </CardContent>
         </Card>
 
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Supplier Dues Payable</span>
+            <span className="text-xs text-[#334155]">Supplier Dues Payable</span>
             <div className="text-xl font-bold font-mono text-[#991B1B] mt-0.5">
               {formatBDT(totalDue)}
             </div>
-            <span className="text-[11px] text-[#697586]">L/C & usance sight obligations</span>
+            <span className="text-[11px] text-[#334155]">L/C & usance sight obligations</span>
           </CardContent>
         </Card>
 
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Payments Disbursed</span>
+            <span className="text-xs text-[#334155]">Payments Disbursed</span>
             <div className="text-xl font-bold font-mono text-[#166534] mt-0.5">
               {formatBDT(totalPaid)}
             </div>
-            <span className="text-[11px] text-[#697586]">Via Eastern Bank & IBBL L/Cs</span>
+            <span className="text-[11px] text-[#334155]">Via Eastern Bank & IBBL L/Cs</span>
           </CardContent>
         </Card>
 
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Active Pipeline</span>
+            <span className="text-xs text-[#334155]">Active Pipeline</span>
             <div className="text-xl font-bold font-mono text-[#526B83] mt-0.5">
               {activeShipments} Shipments
             </div>
-            <span className="text-[11px] text-[#697586]">In transit or undergoing customs</span>
+            <span className="text-[11px] text-[#334155]">In transit or undergoing customs</span>
           </CardContent>
         </Card>
       </div>

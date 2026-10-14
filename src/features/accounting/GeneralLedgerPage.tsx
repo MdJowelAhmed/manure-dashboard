@@ -64,8 +64,8 @@ export const GeneralLedgerPage: React.FC = () => {
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h2 className="text-xl font-bold text-[#202833]">General Ledger (GL)</h2>
-          <p className="text-xs text-[#697586]">
+          <h2 className="text-xl font-bold text-[#0F172A]">General Ledger (GL)</h2>
+          <p className="text-xs text-[#334155]">
             Detailed transaction history and running balances per chart of accounts code
           </p>
         </div>
@@ -92,20 +92,20 @@ export const GeneralLedgerPage: React.FC = () => {
         <Card className="bg-white border-[#DCE2E8]">
           <CardContent className="p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
-              <span className="text-xs text-[#697586]">Account Particulars</span>
-              <h3 className="text-base font-bold text-[#202833] mt-0.5">
+              <span className="text-xs text-[#334155]">Account Particulars</span>
+              <h3 className="text-base font-bold text-[#0F172A] mt-0.5">
                 {activeAccount.code} — {activeAccount.name}
               </h3>
-              <p className="text-xs text-[#697586] mt-0.5">{activeAccount.description}</p>
+              <p className="text-xs text-[#334155] mt-0.5">{activeAccount.description}</p>
             </div>
             <div className="flex items-center gap-6">
               <div>
-                <span className="text-[11px] text-[#697586]">Classification</span>
+                <span className="text-[11px] text-[#334155]">Classification</span>
                 <div className="text-xs font-semibold text-[#526B83]">{activeAccount.type}</div>
               </div>
               <div>
-                <span className="text-[11px] text-[#697586]">Ledger Closing Balance</span>
-                <div className="text-lg font-bold font-mono text-[#202833]">
+                <span className="text-[11px] text-[#334155]">Ledger Closing Balance</span>
+                <div className="text-lg font-bold font-mono text-[#0F172A]">
                   {formatBDT(activeAccount.balanceBDT)}
                 </div>
               </div>
@@ -143,8 +143,8 @@ export const GeneralLedgerPage: React.FC = () => {
                     <TableCell className="font-mono font-medium text-xs text-[#526B83]">
                       {row.journalRef}
                     </TableCell>
-                    <TableCell className="text-xs text-[#697586]">{row.source}</TableCell>
-                    <TableCell className="text-xs text-[#202833] max-w-[280px]">
+                    <TableCell className="text-xs text-[#334155]">{row.source}</TableCell>
+                    <TableCell className="text-xs text-[#0F172A] max-w-[280px]">
                       {row.description}
                     </TableCell>
                     <TableCell className="text-right font-mono text-xs">
@@ -153,7 +153,7 @@ export const GeneralLedgerPage: React.FC = () => {
                     <TableCell className="text-right font-mono text-xs">
                       {row.creditBDT > 0 ? formatBDT(row.creditBDT) : '—'}
                     </TableCell>
-                    <TableCell className="text-right font-mono font-bold text-xs text-[#202833]">
+                    <TableCell className="text-right font-mono font-bold text-xs text-[#0F172A]">
                       {formatBDT(row.balanceBDT)}
                     </TableCell>
                   </TableRow>
@@ -169,7 +169,7 @@ export const GeneralLedgerPage: React.FC = () => {
               </TableBody>
             </Table>
           ) : (
-            <div className="p-8 text-center text-xs text-[#697586]">
+            <div className="p-8 text-center text-xs text-[#334155]">
               No transactions posted for this account code yet.
             </div>
           )}

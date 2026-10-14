@@ -72,10 +72,10 @@ export const ProductDetailPage: React.FC = () => {
           </Button>
           <div>
             <div className="flex items-center gap-2.5">
-              <h2 className="text-xl font-bold text-[#202833]">{product.name}</h2>
+              <h2 className="text-xl font-bold text-[#0F172A]">{product.name}</h2>
               <StatusBadge status={product.status} />
             </div>
-            <p className="text-xs text-[#697586]">
+            <p className="text-xs text-[#334155]">
               SKU: {product.sku} • Category: {product.category} • Origin: {product.originCountry}
             </p>
           </div>
@@ -104,11 +104,11 @@ export const ProductDetailPage: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Available Physical Stock</span>
-            <div className="text-xl font-bold font-mono text-[#202833] mt-0.5">
+            <span className="text-xs text-[#334155]">Available Physical Stock</span>
+            <div className="text-xl font-bold font-mono text-[#0F172A] mt-0.5">
               {product.stockMT.toLocaleString()} MT
             </div>
-            <span className="text-[11px] text-[#697586]">
+            <span className="text-[11px] text-[#334155]">
               Reorder Threshold: {product.reorderLevelMT} MT
             </span>
           </CardContent>
@@ -116,11 +116,11 @@ export const ProductDetailPage: React.FC = () => {
 
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Standard Bag Count</span>
+            <span className="text-xs text-[#334155]">Standard Bag Count</span>
             <div className="text-xl font-bold font-mono text-[#0F766E] mt-0.5">
               {Math.round(bags).toLocaleString()} Bags
             </div>
-            <span className="text-[11px] text-[#697586]">
+            <span className="text-[11px] text-[#334155]">
               {product.kgPerBag} kg bag specification
             </span>
           </CardContent>
@@ -128,11 +128,11 @@ export const ProductDetailPage: React.FC = () => {
 
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Landed Cost per MT</span>
-            <div className="text-xl font-bold font-mono text-[#202833] mt-0.5">
+            <span className="text-xs text-[#334155]">Landed Cost per MT</span>
+            <div className="text-xl font-bold font-mono text-[#0F172A] mt-0.5">
               ৳ {product.landedCostPerMT.toLocaleString()}
             </div>
-            <span className="text-[11px] text-[#697586]">
+            <span className="text-[11px] text-[#334155]">
               ৳ {Math.round(product.landedCostPerMT / (1000 / product.kgPerBag)).toLocaleString()} / Bag
             </span>
           </CardContent>
@@ -140,7 +140,7 @@ export const ProductDetailPage: React.FC = () => {
 
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Domestic Selling Price</span>
+            <span className="text-xs text-[#334155]">Domestic Selling Price</span>
             <div className="text-xl font-bold font-mono text-[#526B83] mt-0.5">
               ৳ {product.sellingPricePerMT.toLocaleString()}
             </div>
@@ -187,7 +187,7 @@ export const ProductDetailPage: React.FC = () => {
                       <TableRow key={m.id}>
                         <TableCell className="text-xs">{formatDate(m.date)}</TableCell>
                         <TableCell>
-                          <span className="font-semibold text-xs text-[#202833]">
+                          <span className="font-semibold text-xs text-[#0F172A]">
                             {m.movementType}
                           </span>
                         </TableCell>
@@ -204,13 +204,13 @@ export const ProductDetailPage: React.FC = () => {
                         <TableCell className="text-right font-mono font-medium text-xs">
                           {m.balanceAfterMT} MT
                         </TableCell>
-                        <TableCell className="text-xs text-[#697586]">{m.notes || '—'}</TableCell>
+                        <TableCell className="text-xs text-[#334155]">{m.notes || '—'}</TableCell>
                       </TableRow>
                     ))}
                   </TableBody>
                 </Table>
               ) : (
-                <div className="p-6 text-center text-xs text-[#697586]">
+                <div className="p-6 text-center text-xs text-[#334155]">
                   No logged movements for this product.
                 </div>
               )}
@@ -230,27 +230,27 @@ export const ProductDetailPage: React.FC = () => {
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="p-4 rounded-xl border border-[#DCE2E8] bg-[#F8FAFC]">
-                  <span className="text-xs text-[#697586] block">Base Accounting Unit</span>
-                  <div className="text-xl font-bold text-[#202833] mt-1">1 Metric Ton (MT)</div>
-                  <p className="text-xs text-[#697586] mt-2">
+                  <span className="text-xs text-[#334155] block">Base Accounting Unit</span>
+                  <div className="text-xl font-bold text-[#0F172A] mt-1">1 Metric Ton (MT)</div>
+                  <p className="text-xs text-[#334155] mt-2">
                     Official base unit stored in ledger, imports, and bulk valuation.
                   </p>
                 </div>
 
                 <div className="p-4 rounded-xl border border-[#DCE2E8] bg-[#F8FAFC]">
-                  <span className="text-xs text-[#697586] block">Bag Size Specification</span>
-                  <div className="text-xl font-bold text-[#202833] mt-1">
+                  <span className="text-xs text-[#334155] block">Bag Size Specification</span>
+                  <div className="text-xl font-bold text-[#0F172A] mt-1">
                     {product.kgPerBag} KG / Bag
                   </div>
-                  <p className="text-xs text-[#697586] mt-2">
+                  <p className="text-xs text-[#334155] mt-2">
                     1 MT = {1000 / product.kgPerBag} standard packaged bags.
                   </p>
                 </div>
 
                 <div className="p-4 rounded-xl border border-[#DCE2E8] bg-[#F8FAFC]">
-                  <span className="text-xs text-[#697586] block">Weight in Kilograms</span>
-                  <div className="text-xl font-bold text-[#202833] mt-1">1,000 KG / MT</div>
-                  <p className="text-xs text-[#697586] mt-2">
+                  <span className="text-xs text-[#334155] block">Weight in Kilograms</span>
+                  <div className="text-xl font-bold text-[#0F172A] mt-1">1,000 KG / MT</div>
+                  <p className="text-xs text-[#334155] mt-2">
                     Total current stock equivalent: {kg.toLocaleString()} KG.
                   </p>
                 </div>
@@ -349,7 +349,7 @@ export const ProductDetailPage: React.FC = () => {
                         <TableCell className="text-right font-mono">
                           ৳ {it?.unitPriceBDT.toLocaleString()}
                         </TableCell>
-                        <TableCell className="text-right font-mono font-bold text-[#202833]">
+                        <TableCell className="text-right font-mono font-bold text-[#0F172A]">
                           {formatBDT(it?.totalBDT || 0)}
                         </TableCell>
                       </TableRow>

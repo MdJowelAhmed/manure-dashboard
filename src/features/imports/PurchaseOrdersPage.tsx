@@ -29,8 +29,8 @@ export const PurchaseOrdersPage: React.FC = () => {
       header: 'Supplier',
       cell: ({ row }) => (
         <div className="flex flex-col">
-          <span className="font-medium text-[#202833]">{row.original.supplierName}</span>
-          <span className="text-[11px] text-[#697586]">Inv: {row.original.supplierInvoiceNo}</span>
+          <span className="font-medium text-[#0F172A]">{row.original.supplierName}</span>
+          <span className="text-[11px] text-[#334155]">Inv: {row.original.supplierInvoiceNo}</span>
         </div>
       ),
     },
@@ -57,7 +57,7 @@ export const PurchaseOrdersPage: React.FC = () => {
       accessorKey: 'totalImportCostBDT',
       header: 'Contract FOB & Cost (BDT)',
       cell: ({ row }) => (
-        <span className="font-mono font-semibold text-[#202833]">
+        <span className="font-mono font-semibold text-[#0F172A]">
           {formatBDT(row.original.totalImportCostBDT)}
         </span>
       ),
@@ -90,8 +90,8 @@ export const PurchaseOrdersPage: React.FC = () => {
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h2 className="text-xl font-bold text-[#202833]">Purchase Orders & Procurement Contracts</h2>
-          <p className="text-xs text-[#697586]">
+          <h2 className="text-xl font-bold text-[#0F172A]">Purchase Orders & Procurement Contracts</h2>
+          <p className="text-xs text-[#334155]">
             Tracks bulk fertilizer import purchase orders placed with global manufacturers
           </p>
         </div>

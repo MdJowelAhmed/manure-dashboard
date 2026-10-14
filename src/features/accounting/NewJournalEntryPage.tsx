@@ -150,8 +150,8 @@ export const NewJournalEntryPage: React.FC = () => {
             <ArrowLeft className="h-4 w-4" />
           </Button>
           <div>
-            <h2 className="text-xl font-bold text-[#202833]">Post Double-Entry Journal</h2>
-            <p className="text-xs text-[#697586]">
+            <h2 className="text-xl font-bold text-[#0F172A]">Post Double-Entry Journal</h2>
+            <p className="text-xs text-[#334155]">
               Real-time balance enforcement: Total debits must strictly equal total credits
             </p>
           </div>
@@ -337,13 +337,13 @@ export const NewJournalEntryPage: React.FC = () => {
 
               {/* Totals & Real-Time Balancing Status Row */}
               <TableRow className="bg-[#F8FAFC] font-semibold border-t-2 border-[#DCE2E8]">
-                <TableCell colSpan={2} className="text-right text-xs text-[#202833]">
+                <TableCell colSpan={2} className="text-right text-xs text-[#0F172A]">
                   Double-Entry Totals:
                 </TableCell>
-                <TableCell className="text-right font-mono font-bold text-xs text-[#202833]">
+                <TableCell className="text-right font-mono font-bold text-xs text-[#0F172A]">
                   {formatBDT(totalDebit)}
                 </TableCell>
-                <TableCell className="text-right font-mono font-bold text-xs text-[#202833]">
+                <TableCell className="text-right font-mono font-bold text-xs text-[#0F172A]">
                   {formatBDT(totalCredit)}
                 </TableCell>
                 <TableCell></TableCell>

@@ -101,7 +101,7 @@ export const Sidebar: React.FC = () => {
   return (
     <aside
       className={cn(
-        'relative flex flex-col border-r border-[#DCE2E8] bg-white text-[#202833] transition-all duration-300 select-none z-30 shrink-0 h-screen sticky top-0 shadow-[1px_0_4px_rgba(0,0,0,0.02)]',
+        'relative flex flex-col border-r border-[#DCE2E8] bg-white text-[#0F172A] transition-all duration-300 select-none z-30 shrink-0 h-screen sticky top-0 shadow-[1px_0_4px_rgba(0,0,0,0.02)]',
         collapsed ? 'w-[68px]' : 'w-[260px]'
       )}
     >
@@ -113,10 +113,10 @@ export const Sidebar: React.FC = () => {
               M
             </div>
             <div className="flex flex-col truncate">
-              <span className="font-semibold text-sm tracking-tight text-[#202833] leading-tight truncate">
+              <span className="font-semibold text-sm tracking-tight text-[#0F172A] leading-tight truncate">
                 Meridian Business
               </span>
-              <span className="text-[11px] text-[#697586] truncate">
+              <span className="text-[11px] text-[#334155] truncate">
                 Fertilizer Import & Sales
               </span>
             </div>
@@ -129,7 +129,7 @@ export const Sidebar: React.FC = () => {
 
         <button
           onClick={() => dispatch(toggleSidebar())}
-          className="hidden md:flex h-7 w-7 items-center justify-center rounded-md border border-[#DCE2E8] text-[#697586] hover:bg-[#F1F5F9] hover:text-[#202833] transition-colors cursor-pointer"
+          className="hidden md:flex h-7 w-7 items-center justify-center rounded-md border border-[#DCE2E8] text-[#334155] hover:bg-[#F1F5F9] hover:text-[#0F172A] transition-colors cursor-pointer"
           title={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
         >
           {collapsed ? <ChevronRight className="h-4 w-4" /> : <ChevronLeft className="h-4 w-4" />}
@@ -164,15 +164,15 @@ export const Sidebar: React.FC = () => {
                     className={cn(
                       'flex items-center gap-3 px-2.5 py-1.5 rounded-lg text-xs font-medium transition-all group relative',
                       isActive
-                        ? 'bg-[#EBF0F5] text-[#202833] font-semibold'
-                        : 'text-[#526B83] hover:text-[#202833] hover:bg-[#F8FAFC]'
+                        ? 'bg-[#EBF0F5] text-[#0F172A] font-semibold'
+                        : 'text-[#526B83] hover:text-[#0F172A] hover:bg-[#F8FAFC]'
                     )}
                     title={collapsed ? item.title : undefined}
                   >
                     <Icon
                       className={cn(
                         'h-4 w-4 shrink-0 transition-colors',
-                        isActive ? 'text-[#526B83]' : 'text-[#697586] group-hover:text-[#202833]'
+                        isActive ? 'text-[#526B83]' : 'text-[#334155] group-hover:text-[#0F172A]'
                       )}
                     />
                     {!collapsed && (
@@ -197,10 +197,10 @@ export const Sidebar: React.FC = () => {
           <div className="flex items-start gap-2.5 p-2 rounded-lg bg-white border border-[#DCE2E8]">
             <Warehouse className="h-4 w-4 text-[#526B83] mt-0.5 shrink-0" />
             <div className="flex flex-col min-w-0">
-              <span className="text-[11px] font-semibold text-[#202833] truncate">
+              <span className="text-[11px] font-semibold text-[#0F172A] truncate">
                 Khatunganj Central Depot
               </span>
-              <span className="text-[10px] text-[#697586] truncate">
+              <span className="text-[10px] text-[#334155] truncate">
                 Chattogram • 15,000 MT
               </span>
             </div>

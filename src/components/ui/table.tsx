@@ -46,7 +46,7 @@ const TableFooter = React.forwardRef<
   <tfoot
     ref={ref}
     className={cn(
-      'border-t border-[#DCE2E8] bg-[#F8FAFC] font-semibold text-[#202833]',
+      'border-t border-[#DCE2E8] bg-[#F8FAFC] font-semibold text-[#0F172A]',
       className
     )}
     {...props}
@@ -90,7 +90,7 @@ const TableCell = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <td
     ref={ref}
-    className={cn('p-3 align-middle text-[#202833] text-xs font-normal', className)}
+    className={cn('p-3 align-middle text-[#0F172A] text-xs font-normal', className)}
     {...props}
   />
 ))
@@ -102,7 +102,7 @@ const TableCaption = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <caption
     ref={ref}
-    className={cn('mt-4 text-xs text-[#697586]', className)}
+    className={cn('mt-4 text-xs text-[#334155]', className)}
     {...props}
   />
 ))

@@ -33,8 +33,8 @@ export const ProfitLossPage: React.FC = () => {
             <ArrowLeft className="h-4 w-4" />
           </Button>
           <div>
-            <h2 className="text-xl font-bold text-[#202833]">Statement of Profit or Loss (Income Statement)</h2>
-            <p className="text-xs text-[#697586]">
+            <h2 className="text-xl font-bold text-[#0F172A]">Statement of Profit or Loss (Income Statement)</h2>
+            <p className="text-xs text-[#334155]">
               Coherent derivation from sales invoices, landed-cost COGS, and operational overheads
             </p>
           </div>
@@ -58,17 +58,17 @@ export const ProfitLossPage: React.FC = () => {
         {/* Statement Header */}
         <div className="flex justify-between items-start pb-4 border-b border-[#DCE2E8]">
           <div>
-            <h3 className="text-lg font-bold text-[#202833]">{company.companyName}</h3>
-            <p className="text-xs text-[#697586]">{company.headOfficeAddress}</p>
+            <h3 className="text-lg font-bold text-[#0F172A]">{company.companyName}</h3>
+            <p className="text-xs text-[#334155]">{company.headOfficeAddress}</p>
           </div>
           <div className="text-right">
             <span className="text-xs font-bold uppercase tracking-wider text-[#526B83]">
               STATEMENT OF PROFIT OR LOSS
             </span>
-            <div className="text-xs text-[#697586] mt-1">
+            <div className="text-xs text-[#334155] mt-1">
               For Period: <strong>01 July 2025 to 30 June 2026</strong>
             </div>
-            <div className="text-xs text-[#697586]">All amounts in Bangladeshi Taka (BDT)</div>
+            <div className="text-xs text-[#334155]">All amounts in Bangladeshi Taka (BDT)</div>
           </div>
         </div>
 
@@ -76,35 +76,35 @@ export const ProfitLossPage: React.FC = () => {
           <TableBody>
             {/* 1. REVENUE */}
             <TableRow className="bg-[#F8FAFC] font-bold text-xs">
-              <TableCell colSpan={2} className="text-[#202833] uppercase tracking-wider">
+              <TableCell colSpan={2} className="text-[#0F172A] uppercase tracking-wider">
                 1. REVENUE FROM DOMESTIC SALES
               </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell className="pl-6 text-xs text-[#202833]">Gross Domestic Fertilizer Invoices</TableCell>
+              <TableCell className="pl-6 text-xs text-[#0F172A]">Gross Domestic Fertilizer Invoices</TableCell>
               <TableCell className="text-right font-mono text-xs">{formatBDT(summary.grossSalesBDT)}</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell className="pl-6 text-xs text-[#697586]">Less: Sales Returns & Credit Allowances</TableCell>
+              <TableCell className="pl-6 text-xs text-[#334155]">Less: Sales Returns & Credit Allowances</TableCell>
               <TableCell className="text-right font-mono text-xs text-[#991B1B]">
                 {summary.salesReturnsBDT > 0 ? `-${formatBDT(summary.salesReturnsBDT)}` : '৳ 0'}
               </TableCell>
             </TableRow>
             <TableRow className="font-bold border-b-2 border-[#DCE2E8]">
-              <TableCell className="pl-6 text-xs text-[#202833]">Net Revenue from Operations</TableCell>
-              <TableCell className="text-right font-mono font-bold text-xs text-[#202833]">
+              <TableCell className="pl-6 text-xs text-[#0F172A]">Net Revenue from Operations</TableCell>
+              <TableCell className="text-right font-mono font-bold text-xs text-[#0F172A]">
                 {formatBDT(summary.netSalesBDT)}
               </TableCell>
             </TableRow>
 
             {/* 2. COST OF GOODS SOLD */}
             <TableRow className="bg-[#F8FAFC] font-bold text-xs">
-              <TableCell colSpan={2} className="text-[#202833] uppercase tracking-wider">
+              <TableCell colSpan={2} className="text-[#0F172A] uppercase tracking-wider">
                 2. COST OF GOODS SOLD (CAPITALIZED LANDED COST)
               </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell className="pl-6 text-xs text-[#697586]">
+              <TableCell className="pl-6 text-xs text-[#334155]">
                 Allocated Landed Cost of Fertilizer Delivered (FOB + Freight + Duty + Port + C&F)
               </TableCell>
               <TableCell className="text-right font-mono text-xs text-[#991B1B]">
@@ -112,7 +112,7 @@ export const ProfitLossPage: React.FC = () => {
               </TableCell>
             </TableRow>
             <TableRow className="font-bold bg-[#EBF0F5]/50 border-y border-[#CBD5E1]">
-              <TableCell className="text-xs font-bold text-[#202833]">
+              <TableCell className="text-xs font-bold text-[#0F172A]">
                 GROSS PROFIT (Margin: {summary.grossProfitMargin.toFixed(1)}%)
               </TableCell>
               <TableCell className="text-right font-mono font-bold text-sm text-[#0F766E]">
@@ -122,18 +122,18 @@ export const ProfitLossPage: React.FC = () => {
 
             {/* 3. OPERATING EXPENSES */}
             <TableRow className="bg-[#F8FAFC] font-bold text-xs">
-              <TableCell colSpan={2} className="text-[#202833] uppercase tracking-wider">
+              <TableCell colSpan={2} className="text-[#0F172A] uppercase tracking-wider">
                 3. OPERATING EXPENSES (ADMINISTRATIVE & DEPOT OVERHEAD)
               </TableCell>
             </TableRow>
             {Object.entries(expenseByCategory).map(([cat, amt]) => (
               <TableRow key={cat}>
-                <TableCell className="pl-6 text-xs text-[#697586]">{cat}</TableCell>
+                <TableCell className="pl-6 text-xs text-[#334155]">{cat}</TableCell>
                 <TableCell className="text-right font-mono text-xs">{formatBDT(amt)}</TableCell>
               </TableRow>
             ))}
             <TableRow className="font-semibold border-b-2 border-[#DCE2E8]">
-              <TableCell className="pl-6 text-xs text-[#202833]">Total Operating Expenses</TableCell>
+              <TableCell className="pl-6 text-xs text-[#0F172A]">Total Operating Expenses</TableCell>
               <TableCell className="text-right font-mono font-bold text-xs text-[#991B1B]">
                 -{formatBDT(summary.operatingExpensesBDT)}
               </TableCell>
@@ -151,7 +151,7 @@ export const ProfitLossPage: React.FC = () => {
           </TableBody>
         </Table>
 
-        <div className="pt-4 text-xs text-[#697586] border-t border-[#F1F5F9]">
+        <div className="pt-4 text-xs text-[#334155] border-t border-[#F1F5F9]">
           <p>
             * Note: Fertilizer import ancillary costs (ocean freight, marine insurance, customs duty, port handling, and inland transport)
             are capitalized directly into landed inventory cost and recognized as COGS upon delivery.

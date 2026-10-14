@@ -79,8 +79,8 @@ export const Header: React.FC = () => {
           </Button>
 
           <div className="flex flex-col">
-            <nav className="flex items-center gap-1.5 text-[11px] text-[#697586]">
-              <Link to="/dashboard" className="hover:text-[#202833] transition-colors">
+            <nav className="flex items-center gap-1.5 text-[11px] text-[#334155]">
+              <Link to="/dashboard" className="hover:text-[#0F172A] transition-colors">
                 Meridian
               </Link>
               {pathParts.map((part, index) => {
@@ -91,9 +91,9 @@ export const Header: React.FC = () => {
                   <React.Fragment key={href}>
                     <ChevronRight className="h-3 w-3 text-[#94A3B8]" />
                     {isLast ? (
-                      <span className="font-medium text-[#202833]">{label}</span>
+                      <span className="font-medium text-[#0F172A]">{label}</span>
                     ) : (
-                      <Link to={href} className="hover:text-[#202833] transition-colors">
+                      <Link to={href} className="hover:text-[#0F172A] transition-colors">
                         {label}
                       </Link>
                     )}
@@ -101,7 +101,7 @@ export const Header: React.FC = () => {
                 )
               })}
             </nav>
-            <h1 className="text-base font-semibold text-[#202833] leading-tight">
+            <h1 className="text-base font-semibold text-[#0F172A] leading-tight">
               {pageTitle}
             </h1>
           </div>
@@ -173,7 +173,7 @@ export const Header: React.FC = () => {
             size="iconSm"
             onClick={() => setResetDialogOpen(true)}
             title="Reset prototype demo data"
-            className="text-[#697586] hover:text-[#B91C1C]"
+            className="text-[#334155] hover:text-[#B91C1C]"
           >
             <RotateCcw className="h-3.5 w-3.5" />
           </Button>
@@ -186,10 +186,10 @@ export const Header: React.FC = () => {
                   AF
                 </div>
                 <div className="hidden lg:flex flex-col text-left">
-                  <span className="text-xs font-semibold text-[#202833] leading-none">
+                  <span className="text-xs font-semibold text-[#0F172A] leading-none">
                     A. S. M. Faruq
                   </span>
-                  <span className="text-[10px] text-[#697586] leading-tight">
+                  <span className="text-[10px] text-[#334155] leading-tight">
                     Owner • Meridian
                   </span>
                 </div>
@@ -198,8 +198,8 @@ export const Header: React.FC = () => {
             <DropdownMenuContent align="end" className="w-56">
               <DropdownMenuLabel>
                 <div className="flex flex-col">
-                  <span className="text-xs font-semibold text-[#202833]">A. S. M. Faruq</span>
-                  <span className="text-[11px] text-[#697586]">faruq@meridian-bd.com</span>
+                  <span className="text-xs font-semibold text-[#0F172A]">A. S. M. Faruq</span>
+                  <span className="text-[11px] text-[#334155]">faruq@meridian-bd.com</span>
                 </div>
               </DropdownMenuLabel>
               <DropdownMenuSeparator />

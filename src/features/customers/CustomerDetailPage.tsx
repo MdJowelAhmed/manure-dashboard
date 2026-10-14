@@ -121,10 +121,10 @@ export const CustomerDetailPage: React.FC = () => {
           </Button>
           <div>
             <div className="flex items-center gap-2.5">
-              <h2 className="text-xl font-bold text-[#202833]">{customer.name}</h2>
+              <h2 className="text-xl font-bold text-[#0F172A]">{customer.name}</h2>
               <StatusBadge status={customer.overdueStatus} />
             </div>
-            <p className="text-xs text-[#697586]">
+            <p className="text-xs text-[#334155]">
               Code: {customer.code} • District: {customer.district} • Trade Lic: {customer.tradeLicenseNo}
             </p>
           </div>
@@ -165,41 +165,41 @@ export const CustomerDetailPage: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 no-print">
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Total Invoiced Volume</span>
-            <div className="text-xl font-bold font-mono text-[#202833] mt-0.5">
+            <span className="text-xs text-[#334155]">Total Invoiced Volume</span>
+            <div className="text-xl font-bold font-mono text-[#0F172A] mt-0.5">
               {formatBDT(customer.totalSalesBDT)}
             </div>
-            <span className="text-[11px] text-[#697586]">{invoices.length} Invoices Issued</span>
+            <span className="text-[11px] text-[#334155]">{invoices.length} Invoices Issued</span>
           </CardContent>
         </Card>
 
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Total Paid to Date</span>
+            <span className="text-xs text-[#334155]">Total Paid to Date</span>
             <div className="text-xl font-bold font-mono text-[#166534] mt-0.5">
               {formatBDT(customer.totalPaidBDT)}
             </div>
-            <span className="text-[11px] text-[#697586]">Settled via bank transfers</span>
+            <span className="text-[11px] text-[#334155]">Settled via bank transfers</span>
           </CardContent>
         </Card>
 
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Outstanding Due Balance</span>
+            <span className="text-xs text-[#334155]">Outstanding Due Balance</span>
             <div className="text-xl font-bold font-mono text-[#991B1B] mt-0.5">
               {formatBDT(customer.outstandingDueBDT)}
             </div>
-            <span className="text-[11px] text-[#697586]">Credit Limit: {formatBDT(customer.creditLimitBDT)}</span>
+            <span className="text-[11px] text-[#334155]">Credit Limit: {formatBDT(customer.creditLimitBDT)}</span>
           </CardContent>
         </Card>
 
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Credit Utilization</span>
+            <span className="text-xs text-[#334155]">Credit Utilization</span>
             <div className="text-xl font-bold font-mono text-[#526B83] mt-0.5">
               {((customer.outstandingDueBDT / customer.creditLimitBDT) * 100).toFixed(1)}%
             </div>
-            <span className="text-[11px] text-[#697586]">Of authorized credit ceiling</span>
+            <span className="text-[11px] text-[#334155]">Of authorized credit ceiling</span>
           </CardContent>
         </Card>
       </div>
@@ -220,9 +220,9 @@ export const CustomerDetailPage: React.FC = () => {
             {/* Statement Header */}
             <div className="flex justify-between items-start pb-6 border-b border-[#DCE2E8]">
               <div>
-                <h3 className="text-lg font-bold text-[#202833]">{company.companyName}</h3>
-                <p className="text-xs text-[#697586]">{company.headOfficeAddress}</p>
-                <p className="text-[11px] text-[#697586] mt-1">
+                <h3 className="text-lg font-bold text-[#0F172A]">{company.companyName}</h3>
+                <p className="text-xs text-[#334155]">{company.headOfficeAddress}</p>
+                <p className="text-[11px] text-[#334155] mt-1">
                   Khatunganj Central Depot • Phone: {company.phone}
                 </p>
               </div>
@@ -230,10 +230,10 @@ export const CustomerDetailPage: React.FC = () => {
                 <span className="text-xs font-bold uppercase tracking-wider text-[#526B83]">
                   STATEMENT OF ACCOUNT
                 </span>
-                <div className="text-sm font-bold text-[#202833] mt-1">{customer.name}</div>
-                <div className="text-xs text-[#697586]">Code: {customer.code}</div>
-                <div className="text-xs text-[#697586]">
-                  As of: <strong className="text-[#202833]">{formatDate(new Date())}</strong>
+                <div className="text-sm font-bold text-[#0F172A] mt-1">{customer.name}</div>
+                <div className="text-xs text-[#334155]">Code: {customer.code}</div>
+                <div className="text-xs text-[#334155]">
+                  As of: <strong className="text-[#0F172A]">{formatDate(new Date())}</strong>
                 </div>
               </div>
             </div>
@@ -257,7 +257,7 @@ export const CustomerDetailPage: React.FC = () => {
                     <TableCell className="font-mono text-xs font-medium text-[#526B83]">
                       {entry.ref}
                     </TableCell>
-                    <TableCell className="text-xs text-[#202833] max-w-[320px]">
+                    <TableCell className="text-xs text-[#0F172A] max-w-[320px]">
                       {entry.particulars}
                     </TableCell>
                     <TableCell className="text-right font-mono text-xs">
@@ -266,7 +266,7 @@ export const CustomerDetailPage: React.FC = () => {
                     <TableCell className="text-right font-mono text-xs text-[#166534]">
                       {entry.creditBDT > 0 ? formatBDT(entry.creditBDT) : '—'}
                     </TableCell>
-                    <TableCell className="text-right font-mono font-bold text-xs text-[#202833]">
+                    <TableCell className="text-right font-mono font-bold text-xs text-[#0F172A]">
                       {formatBDT(entry.balanceBDT)}
                     </TableCell>
                   </TableRow>
@@ -365,7 +365,7 @@ export const CustomerDetailPage: React.FC = () => {
                       </TableCell>
                       <TableCell>{formatDate(p.date)}</TableCell>
                       <TableCell>{p.paymentMethod}</TableCell>
-                      <TableCell className="text-xs text-[#697586]">{p.bankAccountName}</TableCell>
+                      <TableCell className="text-xs text-[#334155]">{p.bankAccountName}</TableCell>
                       <TableCell className="font-mono text-xs">{p.referenceNumber}</TableCell>
                       <TableCell className="text-right font-mono font-bold text-[#166534]">
                         {formatBDT(p.amountBDT)}
@@ -387,22 +387,22 @@ export const CustomerDetailPage: React.FC = () => {
             <CardContent className="space-y-3 text-xs">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1">
-                  <span className="text-[#697586]">Business Address:</span>
-                  <div className="font-medium text-[#202833]">{customer.address}</div>
+                  <span className="text-[#334155]">Business Address:</span>
+                  <div className="font-medium text-[#0F172A]">{customer.address}</div>
                 </div>
                 <div className="space-y-1">
-                  <span className="text-[#697586]">District / Region:</span>
-                  <div className="font-medium text-[#202833]">{customer.district}</div>
+                  <span className="text-[#334155]">District / Region:</span>
+                  <div className="font-medium text-[#0F172A]">{customer.district}</div>
                 </div>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 border-t border-[#F1F5F9]">
                 <div className="space-y-1">
-                  <span className="text-[#697586]">Trade License #:</span>
-                  <div className="font-mono text-[#202833]">{customer.tradeLicenseNo}</div>
+                  <span className="text-[#334155]">Trade License #:</span>
+                  <div className="font-mono text-[#0F172A]">{customer.tradeLicenseNo}</div>
                 </div>
                 <div className="space-y-1">
-                  <span className="text-[#697586]">Credit Limit:</span>
-                  <div className="font-mono font-bold text-[#202833]">
+                  <span className="text-[#334155]">Credit Limit:</span>
+                  <div className="font-mono font-bold text-[#0F172A]">
                     {formatBDT(customer.creditLimitBDT)}
                   </div>
                 </div>

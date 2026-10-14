@@ -91,10 +91,10 @@ export const GoodsReceiptsPage: React.FC = () => {
       header: 'Import Consignment',
       cell: ({ row }) => (
         <div className="flex flex-col">
-          <span className="font-mono text-xs font-medium text-[#202833]">
+          <span className="font-mono text-xs font-medium text-[#0F172A]">
             {row.original.importRef}
           </span>
-          <span className="text-[11px] text-[#697586]">{row.original.supplierName}</span>
+          <span className="text-[11px] text-[#334155]">{row.original.supplierName}</span>
         </div>
       ),
     },
@@ -125,7 +125,7 @@ export const GoodsReceiptsPage: React.FC = () => {
       accessorKey: 'warehouseLocation',
       header: 'Warehouse Shed',
       cell: ({ row }) => (
-        <div className="flex items-center gap-1.5 text-xs text-[#202833]">
+        <div className="flex items-center gap-1.5 text-xs text-[#0F172A]">
           <Warehouse className="h-3.5 w-3.5 text-[#526B83]" />
           <span>{row.getValue('warehouseLocation')}</span>
         </div>
@@ -135,7 +135,7 @@ export const GoodsReceiptsPage: React.FC = () => {
       accessorKey: 'receivedBy',
       header: 'Received By',
       cell: ({ row }) => (
-        <span className="text-xs text-[#697586]">{row.getValue('receivedBy')}</span>
+        <span className="text-xs text-[#334155]">{row.getValue('receivedBy')}</span>
       ),
     },
     {
@@ -161,8 +161,8 @@ export const GoodsReceiptsPage: React.FC = () => {
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h2 className="text-xl font-bold text-[#202833]">Goods Receipt Notes (GRN)</h2>
-          <p className="text-xs text-[#697586]">
+          <h2 className="text-xl font-bold text-[#0F172A]">Goods Receipt Notes (GRN)</h2>
+          <p className="text-xs text-[#334155]">
             Physical warehouse discharge logs and stock intake at Khatunganj Central Depot
           </p>
         </div>

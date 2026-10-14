@@ -69,8 +69,8 @@ export const NewCustomerPage: React.FC = () => {
             <ArrowLeft className="h-4 w-4" />
           </Button>
           <div>
-            <h2 className="text-xl font-bold text-[#202833]">Add Customer / Dealer</h2>
-            <p className="text-xs text-[#697586]">
+            <h2 className="text-xl font-bold text-[#0F172A]">Add Customer / Dealer</h2>
+            <p className="text-xs text-[#334155]">
               Register domestic fertilizer distributor with trade license and credit limit
             </p>
           </div>

@@ -47,8 +47,8 @@ export const InventoryOverviewPage: React.FC = () => {
       header: 'Product Name & Category',
       cell: ({ row }) => (
         <div className="flex flex-col">
-          <span className="font-semibold text-xs text-[#202833]">{row.original.name}</span>
-          <span className="text-[11px] text-[#697586]">{row.original.category}</span>
+          <span className="font-semibold text-xs text-[#0F172A]">{row.original.name}</span>
+          <span className="text-[11px] text-[#334155]">{row.original.category}</span>
         </div>
       ),
     },
@@ -60,10 +60,10 @@ export const InventoryOverviewPage: React.FC = () => {
         const bags = item.stockMT * (1000 / item.kgPerBag)
         return (
           <div className="flex flex-col text-right">
-            <span className="font-mono font-bold text-sm text-[#202833]">
+            <span className="font-mono font-bold text-sm text-[#0F172A]">
               {item.stockMT.toLocaleString()} MT
             </span>
-            <span className="text-[11px] text-[#697586]">
+            <span className="text-[11px] text-[#334155]">
               {Math.round(bags).toLocaleString()} Bags ({item.kgPerBag}kg)
             </span>
           </div>
@@ -75,10 +75,10 @@ export const InventoryOverviewPage: React.FC = () => {
       header: 'Landed Unit Cost',
       cell: ({ row }) => (
         <div className="flex flex-col text-right font-mono">
-          <span className="font-medium text-xs text-[#202833]">
+          <span className="font-medium text-xs text-[#0F172A]">
             ৳ {row.original.landedCostPerMT.toLocaleString()} / MT
           </span>
-          <span className="text-[10px] text-[#697586]">
+          <span className="text-[10px] text-[#334155]">
             ৳ {Math.round(row.original.landedCostPerMT / (1000 / row.original.kgPerBag)).toLocaleString()} / Bag
           </span>
         </div>
@@ -97,7 +97,7 @@ export const InventoryOverviewPage: React.FC = () => {
       accessorKey: 'reorderLevelMT',
       header: 'Reorder Level',
       cell: ({ row }) => (
-        <span className="font-mono text-xs text-[#697586] text-right block">
+        <span className="font-mono text-xs text-[#334155] text-right block">
           {row.getValue('reorderLevelMT')} MT
         </span>
       ),
@@ -131,8 +131,8 @@ export const InventoryOverviewPage: React.FC = () => {
       {/* Page Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h2 className="text-xl font-bold text-[#202833]">Warehouse Inventory Management</h2>
-          <p className="text-xs text-[#697586]">
+          <h2 className="text-xl font-bold text-[#0F172A]">Warehouse Inventory Management</h2>
+          <p className="text-xs text-[#334155]">
             Stock levels, unit conversion matrices (MT / Bag / KG), and landed-cost valuation
           </p>
         </div>
@@ -170,11 +170,11 @@ export const InventoryOverviewPage: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
         <Card className="bg-[#FFFFFF] border-[#DCE2E8]">
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Fixed Storage Facility</span>
-            <div className="text-base font-bold text-[#202833] mt-0.5 truncate">
+            <span className="text-xs text-[#334155]">Fixed Storage Facility</span>
+            <div className="text-base font-bold text-[#0F172A] mt-0.5 truncate">
               Khatunganj Central Depot
             </div>
-            <span className="text-[11px] text-[#697586]">
+            <span className="text-[11px] text-[#334155]">
               Capacity: 15,000 MT • Chattogram
             </span>
           </CardContent>
@@ -182,11 +182,11 @@ export const InventoryOverviewPage: React.FC = () => {
 
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Total Physical Stock</span>
-            <div className="text-xl font-bold font-mono text-[#202833] mt-0.5">
+            <span className="text-xs text-[#334155]">Total Physical Stock</span>
+            <div className="text-xl font-bold font-mono text-[#0F172A] mt-0.5">
               {totalStockMT.toLocaleString()} MT
             </div>
-            <span className="text-[11px] text-[#697586]">
+            <span className="text-[11px] text-[#334155]">
               Occupancy: {((totalStockMT / 15000) * 100).toFixed(1)}% of shed capacity
             </span>
           </CardContent>
@@ -194,21 +194,21 @@ export const InventoryOverviewPage: React.FC = () => {
 
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Total Inventory Valuation</span>
+            <span className="text-xs text-[#334155]">Total Inventory Valuation</span>
             <div className="text-xl font-bold font-mono text-[#526B83] mt-0.5">
               {formatBDT(totalValuationBDT)}
             </div>
-            <span className="text-[11px] text-[#697586]">Capitalized landed cost basis</span>
+            <span className="text-[11px] text-[#334155]">Capitalized landed cost basis</span>
           </CardContent>
         </Card>
 
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Safety Stock Alerts</span>
+            <span className="text-xs text-[#334155]">Safety Stock Alerts</span>
             <div className="text-xl font-bold font-mono text-[#B45309] mt-0.5">
               {lowStockCount} Products
             </div>
-            <span className="text-[11px] text-[#697586]">At or below reorder threshold</span>
+            <span className="text-[11px] text-[#334155]">At or below reorder threshold</span>
           </CardContent>
         </Card>
       </div>

@@ -31,8 +31,8 @@ export const ChartOfAccountsPage: React.FC = () => {
       header: 'Account Name',
       cell: ({ row }) => (
         <div className="flex flex-col">
-          <span className="font-semibold text-xs text-[#202833]">{row.original.name}</span>
-          <span className="text-[11px] text-[#697586]">{row.original.description}</span>
+          <span className="font-semibold text-xs text-[#0F172A]">{row.original.name}</span>
+          <span className="text-[11px] text-[#334155]">{row.original.description}</span>
         </div>
       ),
     },
@@ -61,7 +61,7 @@ export const ChartOfAccountsPage: React.FC = () => {
       accessorKey: 'balanceBDT',
       header: 'Current Balance (BDT)',
       cell: ({ row }) => (
-        <span className="font-mono font-bold text-xs text-[#202833] text-right block">
+        <span className="font-mono font-bold text-xs text-[#0F172A] text-right block">
           {formatBDT(row.getValue('balanceBDT'))}
         </span>
       ),
@@ -82,8 +82,8 @@ export const ChartOfAccountsPage: React.FC = () => {
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h2 className="text-xl font-bold text-[#202833]">Standard Chart of Accounts (COA)</h2>
-          <p className="text-xs text-[#697586]">
+          <h2 className="text-xl font-bold text-[#0F172A]">Standard Chart of Accounts (COA)</h2>
+          <p className="text-xs text-[#334155]">
             Full double-entry ledger classification for assets, liabilities, equity, revenue, and expenses
           </p>
         </div>

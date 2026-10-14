@@ -38,7 +38,7 @@ const DropdownMenuSubContent = React.forwardRef<
   <DropdownMenuPrimitive.SubContent
     ref={ref}
     className={cn(
-      'z-50 min-w-[8rem] overflow-hidden rounded-md border border-[#DCE2E8] bg-white p-1 text-[#202833] shadow-lg',
+      'z-50 min-w-[8rem] overflow-hidden rounded-md border border-[#DCE2E8] bg-white p-1 text-[#0F172A] shadow-lg',
       className
     )}
     {...props}
@@ -55,7 +55,7 @@ const DropdownMenuContent = React.forwardRef<
       ref={ref}
       sideOffset={sideOffset}
       className={cn(
-        'z-50 min-w-[8rem] overflow-hidden rounded-lg border border-[#DCE2E8] bg-white p-1 text-[#202833] shadow-md',
+        'z-50 min-w-[8rem] overflow-hidden rounded-lg border border-[#DCE2E8] bg-white p-1 text-[#0F172A] shadow-md',
         className
       )}
       {...props}
@@ -73,7 +73,7 @@ const DropdownMenuItem = React.forwardRef<
   <DropdownMenuPrimitive.Item
     ref={ref}
     className={cn(
-      'relative flex cursor-pointer select-none items-center rounded-md px-2 py-1.5 text-xs outline-none transition-colors hover:bg-[#F1F5F9] focus:bg-[#F1F5F9] focus:text-[#202833] data-[disabled]:pointer-events-none data-[disabled]:opacity-50 text-[#202833]',
+      'relative flex cursor-pointer select-none items-center rounded-md px-2 py-1.5 text-xs outline-none transition-colors hover:bg-[#F1F5F9] focus:bg-[#F1F5F9] focus:text-[#0F172A] data-[disabled]:pointer-events-none data-[disabled]:opacity-50 text-[#0F172A]',
       inset && 'pl-8',
       className
     )}
@@ -137,7 +137,7 @@ const DropdownMenuLabel = React.forwardRef<
   <DropdownMenuPrimitive.Label
     ref={ref}
     className={cn(
-      'px-2 py-1.5 text-xs font-semibold text-[#697586]',
+      'px-2 py-1.5 text-xs font-semibold text-[#334155]',
       inset && 'pl-8',
       className
     )}

@@ -29,7 +29,7 @@ export const MetricCard: React.FC<MetricCardProps> = ({
     <Card className={cn('overflow-hidden relative transition-all hover:border-[#CBD5E1]', className)}>
       <CardContent className="p-4 sm:p-5">
         <div className="flex items-center justify-between pb-2">
-          <span className="text-xs font-medium text-[#697586] tracking-tight">{title}</span>
+          <span className="text-xs font-medium text-[#334155] tracking-tight">{title}</span>
           <div className="flex items-center gap-1.5">
             {badge && (
               <span className="px-2 py-0.5 text-[10px] font-medium bg-[#F1F5F9] text-[#475569] rounded-md border border-[#E2E8F0]">
@@ -45,13 +45,13 @@ export const MetricCard: React.FC<MetricCardProps> = ({
         </div>
 
         <div className="flex items-baseline gap-2">
-          <span className="text-xl sm:text-2xl font-bold tracking-tight text-[#202833] font-mono">
+          <span className="text-xl sm:text-2xl font-bold tracking-tight text-[#0F172A] font-mono">
             {value}
           </span>
         </div>
 
         {(subvalue || trend) && (
-          <div className="flex items-center gap-2 mt-1.5 text-[11px] text-[#697586]">
+          <div className="flex items-center gap-2 mt-1.5 text-[11px] text-[#334155]">
             {trend && (
               <span
                 className={cn(

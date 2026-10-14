@@ -12,7 +12,7 @@ export const AppLayout: React.FC = () => {
   const mobileSidebarOpen = useAppSelector((state) => state.ui.mobileSidebarOpen)
 
   return (
-    <div className="flex min-h-screen bg-[#F7F8FA] text-[#202833]">
+    <div className="flex min-h-screen bg-[#F7F8FA] text-[#0F172A]">
       {/* Desktop Sidebar */}
       <div className="hidden md:block">
         <Sidebar />
@@ -45,7 +45,7 @@ export const AppLayout: React.FC = () => {
         toastOptions={{
           style: {
             background: '#FFFFFF',
-            color: '#202833',
+            color: '#0F172A',
             border: '1px solid #DCE2E8',
             borderRadius: '10px',
             boxShadow: '0 4px 12px rgba(0,0,0,0.06)',

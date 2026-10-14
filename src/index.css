@@ -1,17 +1,23 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+}
+
 @layer base {
   :root {
-    --bg-app: #F7F8FA;
+    --bg-app: #F8FAFC;
     --surface: #FFFFFF;
-    --text-primary: #202833;
-    --text-secondary: #697586;
-    --border-color: #DCE2E8;
+    --text-primary: #0F172A;
+    --text-secondary: #334155;
+    --text-muted: #64748B;
+    --border-color: #E2E8F0;
     --accent: #526B83;
     --accent-hover: #3E5367;
-    --accent-light: #EBF0F5;
+    --accent-light: #F1F5F9;
 
-    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
   }
 
@@ -23,7 +29,10 @@
     background-color: var(--bg-app);
     color: var(--text-primary);
     font-family: var(--font-sans);
-    letter-spacing: -0.011em;
+    letter-spacing: -0.012em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 }
 

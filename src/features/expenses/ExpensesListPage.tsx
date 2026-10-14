@@ -88,28 +88,28 @@ export const ExpensesListPage: React.FC = () => {
       accessorKey: 'category',
       header: 'Operating Category',
       cell: ({ row }) => (
-        <span className="font-medium text-xs text-[#202833]">{row.getValue('category')}</span>
+        <span className="font-medium text-xs text-[#0F172A]">{row.getValue('category')}</span>
       ),
     },
     {
       accessorKey: 'payee',
       header: 'Payee / Vendor',
       cell: ({ row }) => (
-        <span className="text-xs text-[#202833]">{row.getValue('payee')}</span>
+        <span className="text-xs text-[#0F172A]">{row.getValue('payee')}</span>
       ),
     },
     {
       accessorKey: 'paymentAccountName',
       header: 'Payment Account',
       cell: ({ row }) => (
-        <span className="text-xs text-[#697586]">{row.getValue('paymentAccountName')}</span>
+        <span className="text-xs text-[#334155]">{row.getValue('paymentAccountName')}</span>
       ),
     },
     {
       accessorKey: 'amountBDT',
       header: 'Amount (BDT)',
       cell: ({ row }) => (
-        <span className="font-mono font-bold text-xs text-[#202833] text-right block">
+        <span className="font-mono font-bold text-xs text-[#0F172A] text-right block">
           {formatBDT(row.getValue('amountBDT'))}
         </span>
       ),
@@ -118,7 +118,7 @@ export const ExpensesListPage: React.FC = () => {
       accessorKey: 'notes',
       header: 'Voucher Notes',
       cell: ({ row }) => (
-        <span className="text-xs text-[#697586] max-w-[200px] truncate block">
+        <span className="text-xs text-[#334155] max-w-[200px] truncate block">
           {row.getValue('notes') || '—'}
         </span>
       ),
@@ -129,8 +129,8 @@ export const ExpensesListPage: React.FC = () => {
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h2 className="text-xl font-bold text-[#202833]">Operating Expenses (OPEX)</h2>
-          <p className="text-xs text-[#697586]">
+          <h2 className="text-xl font-bold text-[#0F172A]">Operating Expenses (OPEX)</h2>
+          <p className="text-xs text-[#334155]">
             Warehouse godown rent, payroll, depot electricity, and audit fees (segregated from landed cost)
           </p>
         </div>
@@ -146,17 +146,17 @@ export const ExpensesListPage: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Total Operating Expenses (FY 25-26)</span>
-            <div className="text-xl font-bold font-mono text-[#202833] mt-0.5">
+            <span className="text-xs text-[#334155]">Total Operating Expenses (FY 25-26)</span>
+            <div className="text-xl font-bold font-mono text-[#0F172A] mt-0.5">
               {formatBDT(totalExpenses)}
             </div>
-            <span className="text-[11px] text-[#697586]">{expenses.length} Expense Vouchers</span>
+            <span className="text-[11px] text-[#334155]">{expenses.length} Expense Vouchers</span>
           </CardContent>
         </Card>
 
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Warehouse Godown Lease</span>
+            <span className="text-xs text-[#334155]">Warehouse Godown Lease</span>
             <div className="text-xl font-bold font-mono text-[#526B83] mt-0.5">
               {formatBDT(
                 expenses
@@ -164,13 +164,13 @@ export const ExpensesListPage: React.FC = () => {
                   .reduce((s, e) => s + e.amountBDT, 0)
               )}
             </div>
-            <span className="text-[11px] text-[#697586]">Khatunganj 15,000 MT shed rent</span>
+            <span className="text-[11px] text-[#334155]">Khatunganj 15,000 MT shed rent</span>
           </CardContent>
         </Card>
 
         <Card>
           <CardContent className="p-4">
-            <span className="text-xs text-[#697586]">Staff Payroll & Allowances</span>
+            <span className="text-xs text-[#334155]">Staff Payroll & Allowances</span>
             <div className="text-xl font-bold font-mono text-[#526B83] mt-0.5">
               {formatBDT(
                 expenses
@@ -178,7 +178,7 @@ export const ExpensesListPage: React.FC = () => {
                   .reduce((s, e) => s + e.amountBDT, 0)
               )}
             </div>
-            <span className="text-[11px] text-[#697586]">18 depot and logistics staff</span>
+            <span className="text-[11px] text-[#334155]">18 depot and logistics staff</span>
           </CardContent>
         </Card>
       </div>

@@ -27,8 +27,8 @@ export const InventoryValuationReportPage: React.FC = () => {
             <ArrowLeft className="h-4 w-4" />
           </Button>
           <div>
-            <h2 className="text-xl font-bold text-[#202833]">Inventory Valuation Report</h2>
-            <p className="text-xs text-[#697586]">
+            <h2 className="text-xl font-bold text-[#0F172A]">Inventory Valuation Report</h2>
+            <p className="text-xs text-[#334155]">
               Capitalized landed cost asset valuation of physical stocks held at Khatunganj Central Depot
             </p>
           </div>
@@ -50,9 +50,9 @@ export const InventoryValuationReportPage: React.FC = () => {
       <div className="bg-white rounded-xl border border-[#DCE2E8] p-6 sm:p-8 print-card space-y-6">
         <div className="flex justify-between items-start pb-4 border-b border-[#DCE2E8]">
           <div>
-            <h3 className="text-lg font-bold text-[#202833]">{company.companyName}</h3>
-            <p className="text-xs text-[#697586]">{company.headOfficeAddress}</p>
-            <p className="text-[11px] text-[#697586] mt-0.5">
+            <h3 className="text-lg font-bold text-[#0F172A]">{company.companyName}</h3>
+            <p className="text-xs text-[#334155]">{company.headOfficeAddress}</p>
+            <p className="text-[11px] text-[#334155] mt-0.5">
               Depot: {company.warehouseName} ({company.warehouseAddress})
             </p>
           </div>
@@ -60,10 +60,10 @@ export const InventoryValuationReportPage: React.FC = () => {
             <span className="text-xs font-bold uppercase tracking-wider text-[#526B83]">
               INVENTORY VALUATION STATEMENT
             </span>
-            <div className="text-xs text-[#697586] mt-1">
-              As of: <strong className="text-[#202833]">{formatDate(new Date())}</strong>
+            <div className="text-xs text-[#334155] mt-1">
+              As of: <strong className="text-[#0F172A]">{formatDate(new Date())}</strong>
             </div>
-            <div className="text-xs text-[#697586]">Valuation Basis: Capitalized Landed Cost</div>
+            <div className="text-xs text-[#334155]">Valuation Basis: Capitalized Landed Cost</div>
           </div>
         </div>
 
@@ -91,26 +91,26 @@ export const InventoryValuationReportPage: React.FC = () => {
                   <TableCell className="font-mono font-medium text-xs text-[#526B83]">
                     {p.sku}
                   </TableCell>
-                  <TableCell className="font-semibold text-xs text-[#202833]">
+                  <TableCell className="font-semibold text-xs text-[#0F172A]">
                     {p.name}
                   </TableCell>
-                  <TableCell className="text-xs text-[#697586]">{p.category}</TableCell>
+                  <TableCell className="text-xs text-[#334155]">{p.category}</TableCell>
                   <TableCell className="text-right font-mono font-bold text-xs">
                     {p.stockMT.toLocaleString()} MT
                   </TableCell>
-                  <TableCell className="text-right font-mono text-xs text-[#697586]">
+                  <TableCell className="text-right font-mono text-xs text-[#334155]">
                     {Math.round(bags).toLocaleString()}
                   </TableCell>
                   <TableCell className="text-right font-mono text-xs">
                     ৳ {p.landedCostPerMT.toLocaleString()}
                   </TableCell>
-                  <TableCell className="text-right font-mono text-xs text-[#697586]">
+                  <TableCell className="text-right font-mono text-xs text-[#334155]">
                     ৳ {Math.round(p.landedCostPerMT / (1000 / p.kgPerBag)).toLocaleString()}
                   </TableCell>
-                  <TableCell className="text-right font-mono font-bold text-xs text-[#202833]">
+                  <TableCell className="text-right font-mono font-bold text-xs text-[#0F172A]">
                     {formatBDT(itemValuation)}
                   </TableCell>
-                  <TableCell className="text-right font-mono text-xs text-[#697586]">
+                  <TableCell className="text-right font-mono text-xs text-[#334155]">
                     {share.toFixed(1)}%
                   </TableCell>
                 </TableRow>
