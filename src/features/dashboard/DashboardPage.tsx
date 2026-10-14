@@ -445,7 +445,7 @@ export const DashboardPage: React.FC = () => {
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-semibold flex items-center gap-2">
-              <AlertTriangle className="h-4 w-4 text-[#B45309]" />
+              {/* <AlertTriangle className="h-4 w-4 text-[#B45309]" /> */}
               <span>Outstanding Customer Receivables ({dueInvoices.length} Dues)</span>
             </CardTitle>
             <CardDescription>
@@ -499,7 +499,7 @@ export const DashboardPage: React.FC = () => {
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-semibold flex items-center gap-2">
-              <Boxes className="h-4 w-4 text-[#B45309]" />
+              {/* <Boxes className="h-4 w-4 text-[#B45309]" /> */}
               <span>Inventory Reorder Status ({lowStockProducts.length} Alert)</span>
             </CardTitle>
             <CardDescription>
